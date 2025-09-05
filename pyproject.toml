@@ -7,8 +7,7 @@ requires-python = ">=3.11,<3.14"
 dependencies = [
     "crewai-tools[mcp]>=0.69.0",
     "crewai[tools]>=0.165.1,<1.0.0",
-    "numpy>=2.3.2",
-    "requests>=2.32.5",
+    "fastapi[standard-no-fastapi-cloud-cli]>=0.116.1",
 ]
 
 [project.scripts]
@@ -22,3 +21,6 @@ build-backend = "hatchling.build"
 
 [tool.crewai]
 type = "flow"
+
+[dependency-groups]
+docs = ["mkdocs-material>=9.6.18", "mkdocstrings-python>=1.18.2"]
