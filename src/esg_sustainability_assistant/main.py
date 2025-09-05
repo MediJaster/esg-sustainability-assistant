@@ -2,33 +2,37 @@ from pydantic import BaseModel
 
 from crewai.flow import Flow, listen, start
 
+from models.esg_info import ESGInfo
+
 from .crews.data_analysis.data_analysis import ESGAnalysisCrew
 
 
-class EsgState(BaseModel):
-    pass
+class ESGState(BaseModel):
+    esg_info: ESGInfo = None
+
+    preliminary_analysis: str = ""
 
 
-class EsgFlow(Flow[EsgState]):
-
+class ESGFlow(Flow[ESGState]):
     @start()
-    def generate_sentence_count(self):
-        company_name = input("company_name > ")
-        industry_sector = input("industry_sector > ")
+    def generate_preliminary_analysis(self):
         data_analysis_crew = ESGAnalysisCrew()
-        res = data_analysis_crew.crew().kickoff(
-            inputs={
-                "company_name": company_name,
-                "industry_sector": industry_sector
-            }
+        result = data_analysis_crew.crew().kickoff(
+            inputs=self.state.esg_info.model_dump()
         )
 
+        self.state.preliminary_analysis = result.raw
+
+        return self.state.preliminary_analysis
+
+
 def kickoff():
-    esg_flow = EsgFlow()
+    esg_flow = ESGFlow()
     esg_flow.kickoff()
 
+
 def plot():
-    esg_flow = EsgFlow()
+    esg_flow = ESGFlow()
     esg_flow.plot()
 
 
