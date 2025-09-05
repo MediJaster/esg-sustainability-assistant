@@ -1,52 +1,35 @@
-#!/usr/bin/env python
-from random import randint
-
 from pydantic import BaseModel
 
 from crewai.flow import Flow, listen, start
 
-from esg_sustainability_assistant.crews.poem_crew.poem_crew import PoemCrew
+from .crews.data_analysis.data_analysis import ESGAnalysisCrew
 
 
-class PoemState(BaseModel):
-    sentence_count: int = 1
-    poem: str = ""
+class EsgState(BaseModel):
+    pass
 
 
-class PoemFlow(Flow[PoemState]):
+class EsgFlow(Flow[EsgState]):
 
     @start()
     def generate_sentence_count(self):
-        print("Generating sentence count")
-        self.state.sentence_count = randint(1, 5)
-
-    @listen(generate_sentence_count)
-    def generate_poem(self):
-        print("Generating poem")
-        result = (
-            PoemCrew()
-            .crew()
-            .kickoff(inputs={"sentence_count": self.state.sentence_count})
+        company_name = input("company_name > ")
+        industry_sector = input("industry_sector > ")
+        data_analysis_crew = ESGAnalysisCrew()
+        res = data_analysis_crew.crew().kickoff(
+            inputs={
+                "company_name": company_name,
+                "industry_sector": industry_sector
+            }
         )
 
-        print("Poem generated", result.raw)
-        self.state.poem = result.raw
-
-    @listen(generate_poem)
-    def save_poem(self):
-        print("Saving poem")
-        with open("poem.txt", "w") as f:
-            f.write(self.state.poem)
-
-
 def kickoff():
-    poem_flow = PoemFlow()
-    poem_flow.kickoff()
-
+    esg_flow = EsgFlow()
+    esg_flow.kickoff()
 
 def plot():
-    poem_flow = PoemFlow()
-    poem_flow.plot()
+    esg_flow = EsgFlow()
+    esg_flow.plot()
 
 
 if __name__ == "__main__":

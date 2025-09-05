@@ -1,0 +1,44 @@
+analyze_esg_context:
+  description: >
+    Condurre un'analisi completa del contesto ESG per l'azienda specificata.
+   
+    La tua analisi deve includere:
+   
+    1. **Contesto Settoriale:**
+       - Identificare le pratiche ESG comuni e i benchmark del settore
+       - Analizzare le sfide e opportunità sostenibili specifiche del settore
+       - Ricercare normative e standard ESG applicabili
+   
+    2. **Profilo Aziendale:**
+       - Raccogliere informazioni pubbliche sui commitment ESG dell'azienda
+       - Identificare eventuali certificazioni sostenibili (B-Corp, ISO 14001, etc.)
+       - Analizzare report di sostenibilità, se disponibili
+   
+    3. **Analisi Competitiva:**
+       - Confrontare le pratiche ESG con i principali competitor
+       - Identificare best practices di settore
+       - Valutare il posizionamento dell'azienda rispetto ai leader del mercato
+   
+    4. **Risk Assessment:**
+       - Identificare potenziali rischi ESG specifici per l'azienda
+       - Analizzare controversie o problematiche passate
+       - Valutare l'esposizione a rischi climatici e normativi
+   
+    Utilizza fonti multiple e affidabili per garantire la completezza dell'analisi.
+    Parametri richiesti: {company_name}, {industry_sector}
+ 
+  expected_output: >
+    Un report strutturato di analisi ESG che includa:
+   
+    - **Executive Summary** con i key findings principali
+    - **Analisi del Contesto Settoriale** con benchmark e pratiche comuni
+    - **Profilo ESG dell'Azienda** con dati specifici e metriche disponibili
+    - **Analisi Competitiva** con confronti e posizionamento
+    - **Risk Assessment** con identificazione di rischi e opportunità
+    - **Raccomandazioni** per miglioramenti e azioni specifiche
+    - **Bibliografia** con tutte le fonti consultate
+   
+    Il report deve essere dettagliato, basato su dati concreti e fornire insights
+    actionable per il decision-making aziendale.
+ 
+  agent: esg_data_analyst
