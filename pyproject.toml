@@ -8,6 +8,7 @@ dependencies = [
     "crewai-tools[mcp]>=0.69.0",
     "crewai[tools]>=0.165.1,<1.0.0",
     "fastapi[standard-no-fastapi-cloud-cli]>=0.116.1",
+    "mlflow>=3.3.2",
 ]
 
 [project.scripts]

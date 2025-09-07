@@ -1,16 +1,16 @@
 from fastapi import FastAPI
 
-from models.esg_info import ESGInfo
+from models.company_info import CompanyInfo
 
-from esg_sustainability_assistant.main import ESGFlow
+from esg_sustainability_assistant.main import ESGSustainabilityFlow
 
 
 app = FastAPI()
 
 
 @app.post("/esg")
-def kickoff_crew(input: ESGInfo) -> str:
-    esg_flow = ESGFlow(esg_info=input, verbose=False)
+def kickoff_crew(input: CompanyInfo) -> str:
+    esg_flow = ESGSustainabilityFlow(company_info=input, verbose=False)
 
     result = esg_flow.kickoff()
     return result
