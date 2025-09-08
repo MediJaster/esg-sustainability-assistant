@@ -14,6 +14,35 @@ app = FastAPI()
 
 @app.post("/esg", tags=["Inference"])
 def generate_esg_report(input: CompanyInfo) -> ESGResponse | None:
+    """
+    Generate an ESG report for a given company.
+
+    Parameters
+    ----------
+    input : CompanyInfo
+        Company information for which to generate the ESG report.
+
+    Returns
+    -------
+    ESGResponse or None
+        ESG report response object, or None if generation fails.
+
+    Raises
+    ------
+    HTTPException
+        If an error occurs during report generation.
+
+    Examples
+    --------
+    >>> from models.company_info import CompanyInfo
+    >>> input = CompanyInfo(name="TestCo", industry_sector="Tech")
+    >>> generate_esg_report(input)  # doctest: +SKIP
+    ESGResponse(...)
+
+    Notes
+    -----
+    Complexity: O(1) for orchestration; underlying flow logic may vary.
+    """
     try:
         with mlflow.start_run(run_name="API_ESG_Analysis", nested=True):
             mlflow.log_param("company_name", input.name)
@@ -45,6 +74,28 @@ def generate_esg_report(input: CompanyInfo) -> ESGResponse | None:
 
 @app.post("/feedback", tags=["Feedback"])
 def submit_feedback(feedback: FeedbackData) -> None:
+    """
+    Submit feedback for a generated ESG report.
+
+    Parameters
+    ----------
+    feedback : FeedbackData
+        Feedback data including trace ID, rating (1-5), and optional text.
+
+    Returns
+    -------
+    None
+
+    Examples
+    --------
+    >>> from models.feedback import FeedbackData
+    >>> fb = FeedbackData(trace_id="abc123", rating=5)
+    >>> submit_feedback(fb)  # doctest: +SKIP
+
+    Notes
+    -----
+    Complexity: O(1).
+    """
     mlflow.log_feedback(
         trace_id=feedback.trace_id,
         value=feedback.rating,

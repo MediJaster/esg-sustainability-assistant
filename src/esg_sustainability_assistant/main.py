@@ -26,6 +26,35 @@ mlflow.set_experiment("ESG Sustainability Assistant")
 
 
 class ESGAnalysisState(BaseModel):
+    """
+    State object for the ESG analysis workflow.
+
+    Parameters
+    ----------
+    company_info : CompanyInfo
+        Company information for the ESG analysis.
+    website : str
+        Website URL of the company.
+    benchmark_analysis : str
+        Results of ESG benchmarking and market research.
+    compliance_roadmap : str
+        Regulatory compliance roadmap.
+    strategic_plan : str
+        Strategic action plan for sustainability.
+    final_report : str
+        Final ESG report.
+
+    Returns
+    -------
+    ESGAnalysisState
+        Instance representing the current state of the ESG analysis.
+
+    Examples
+    --------
+    >>> ESGAnalysisState()
+    ESGAnalysisState(company_info=CompanyInfo(name='Ernst & Young', industry_sector='Consultancy'), website='', benchmark_analysis='', compliance_roadmap='', strategic_plan='', final_report='')
+    """
+
     # Provide a default CompanyInfo for testing if none is set
     company_info: CompanyInfo = CompanyInfo(
         name="Ernst & Young", industry_sector="Consultancy"
@@ -39,16 +68,53 @@ class ESGAnalysisState(BaseModel):
 
 class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
     """
-    Complete ESG analysis workflow orchestrating 4 specialized crews:
-    1. Data Analysis - Benchmark and market research
-    2. Compliance Mapping - Regulatory requirements and frameworks
-    3. Strategic Planning - Action plans and initiatives
-    4. Report Generation - Final comprehensive report
+    Complete ESG analysis workflow orchestrating 4 specialized crews.
+
+    This flow executes the following steps:
+        1. Data Analysis - Benchmark and market research
+        2. Compliance Mapping - Regulatory requirements and frameworks
+        3. Strategic Planning - Action plans and initiatives
+        4. Report Generation - Final comprehensive report
+
+    Parameters
+    ----------
+    state : ESGAnalysisState
+        The state object holding all intermediate and final results.
+
+    Returns
+    -------
+    ESGSustainabilityFlow
+        Instance of the ESG workflow.
+
+    Notes
+    -----
+    Each step is O(1) with respect to the number of workflow steps, but the underlying crew operations may have higher complexity depending on implementation.
     """
 
     @start()
     def run_data_analysis(self):
-        """Step 1: ESG Data Analysis and Benchmarking"""
+        """
+        Step 1: ESG Data Analysis and Benchmarking.
+
+        Returns
+        -------
+        str
+            Status message ("Data analysis completed").
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_data_analysis()
+        'Data analysis completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
         import mlflow
 
         print("\n📊 STEP 1: ESG Data Analysis...")
@@ -82,7 +148,33 @@ class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
 
     @listen(run_data_analysis)
     def run_compliance_mapping(self, _):
-        """Step 2: Compliance & Framework Mapping"""
+        """
+        Step 2: Compliance & Framework Mapping.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        str
+            Status message ("Compliance mapping completed").
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_compliance_mapping(None)
+        'Compliance mapping completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
         import mlflow
 
         print("\n⚖️ STEP 2: Compliance & Framework Mapping...")
@@ -123,7 +215,33 @@ class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
 
     @listen(run_compliance_mapping)
     def run_strategic_planning(self, _):
-        """Step 3: Strategic Action Planning"""
+        """
+        Step 3: Strategic Action Planning.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        str
+            Status message ("Strategic planning completed").
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_strategic_planning(None)
+        'Strategic planning completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
         import mlflow
 
         print("\n💡 STEP 3: Strategic Action Planning...")
@@ -171,7 +289,35 @@ class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
 
     @listen(run_strategic_planning)
     def generate_final_report(self, _):
-        """Step 4: Final Report Creation"""
+        """
+        Step 4: Final Report Creation.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        dict
+            Dictionary with keys: 'benchmark_analysis', 'compliance_roadmap',
+            'strategic_action_plan', 'final_report', 'trace_id'.
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> result = flow.generate_final_report(None)
+        >>> isinstance(result, dict)
+        True
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
         import mlflow
 
         print("\n✍️ STEP 4: Final Report Creation...")
@@ -239,7 +385,28 @@ class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
 
 
 def kickoff():
-    """Execute the complete ESG analysis flow with full mlflow tracing"""
+    """
+    Execute the complete ESG analysis flow with full mlflow tracing.
+
+    Returns
+    -------
+    dict
+        Dictionary with final ESG analysis results.
+
+    Examples
+    --------
+    >>> result = kickoff()
+    >>> isinstance(result, dict)
+    True
+
+    Notes
+    -----
+    Complexity: O(1) for orchestration; underlying crew logic may vary.
+    Raises
+    ------
+    Exception
+        If any step in the flow fails.
+    """
     import mlflow
 
     with mlflow.start_run(run_name="ESG Full Analysis", nested=False) as parent_run:
@@ -255,7 +422,21 @@ def kickoff():
 
 
 def plot():
-    """Generate flow visualization"""
+    """
+    Generate flow visualization.
+
+    Returns
+    -------
+    None
+
+    Examples
+    --------
+    >>> plot()
+
+    Notes
+    -----
+    Complexity: O(1).
+    """
     flow = ESGSustainabilityFlow()
     flow.plot()
 
