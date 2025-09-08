@@ -22,12 +22,12 @@ class ESGComplianceAdvisorCrew:
         super().__init__()
         # Initialize search tools for compliance research
         self.search_tool = SerperDevTool()
-        self.website_search_tool = WebsiteSearchTool(
-            config={
-                "llm": llm_settings,
-                "embedder": embedder_settings,
-            }
-        )
+        # self.website_search_tool = WebsiteSearchTool(
+        #     config={
+        #         "llm": llm_settings,
+        #         "embedder": embedder_settings,
+        #     }
+        # )
 
     @agent
     def regulatory_framework_specialist(self) -> Agent:
@@ -118,9 +118,9 @@ class ESGComplianceAdvisorCrew:
         return Crew(
             agents=self.agents,
             tasks=self.tasks,
-            process=Process.sequential,
+            # process=Process.sequential ,
             verbose=True,
             # memory=True,
             # embedder=embedder_settings,
-            max_rpm=10,
+            # max_rpm=10,
         )

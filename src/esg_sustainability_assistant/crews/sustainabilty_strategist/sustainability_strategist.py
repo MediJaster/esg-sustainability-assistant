@@ -99,9 +99,9 @@ class SustainabilityStrategistCrew:
         return Crew(
             agents=self.agents,
             tasks=self.tasks,
-            process=Process.sequential,
+            # process=Process.sequential ,
             verbose=True,
             # memory=True,
             # embedder=embedder_settings,
-            max_rpm=15,  # Più alto perché non usa search tools
+            # max_rpm=15,  # Più alto perché non usa search tools
         )

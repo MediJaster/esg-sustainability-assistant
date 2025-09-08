@@ -3,13 +3,17 @@ from pydantic import SecretStr
 
 
 class Settings(BaseSettings):
-    model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
+    model_config = {
+        "env_file": ".env", 
+        "env_file_encoding": "utf-8",
+        "extra": "ignore",  # Ignore unexpected environment variables
+    }
 
     AZURE_API_KEY: SecretStr
     AZURE_API_BASE: str
     AZURE_API_VERSION: str
 
-    OPENAI_API_KEY: str
+    # OPENAI_API_KEY: str
 
     LLM_DEPLOYMENT_NAME: str
     EMBEDDING_DEPLOYMENT_NAME: str
@@ -17,8 +21,6 @@ class Settings(BaseSettings):
     SERPER_API_KEY: SecretStr
 
     MLFLOW_TRACKING_URI: str
-
-    STREAMLIT_API_URL: str = "http://localhost:8080"
 
 
 settings = Settings()

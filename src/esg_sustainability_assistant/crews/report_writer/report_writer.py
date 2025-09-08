@@ -84,9 +84,9 @@ class ReportWriterCrew:
         return Crew(
             agents=self.agents,
             tasks=self.tasks,
-            process=Process.sequential,
+            # process=Process.sequential ,
             verbose=True,
             # memory=True,
             # embedder=embedder_settings,
-            max_rpm=20,
+            # max_rpm=20,
         )

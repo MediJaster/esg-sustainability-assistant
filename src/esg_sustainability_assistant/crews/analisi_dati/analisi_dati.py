@@ -30,12 +30,12 @@ class ESGDataAnalystCrew:
             config=self.agents_config["competitor_intelligence_analyst"],
             tools=[
                 SerperDevTool(),
-                WebsiteSearchTool(
-                    config={
-                        "llm": llm_settings,
-                        "embedder": embedder_settings,
-                    }
-                ),
+                # WebsiteSearchTool(
+                #     config={
+                #         "llm": llm_settings,
+                #         "embedder": embedder_settings,
+                #     }
+                # ),
             ],
             verbose=True,
             max_iter=3,
@@ -48,12 +48,12 @@ class ESGDataAnalystCrew:
             config=self.agents_config["company_profile_researcher"],
             tools=[
                 SerperDevTool(),
-                WebsiteSearchTool(
-                    config={
-                        "llm": llm_settings,
-                        "embedder": embedder_settings,
-                    }
-                ),
+                # WebsiteSearchTool(
+                #     config={
+                #         "llm": llm_settings,
+                #         "embedder": embedder_settings,
+                #     }
+                # ),
             ],
             verbose=True,
             max_iter=4,  # Più iterazioni per ricerca approfondita dell'azienda
@@ -117,9 +117,9 @@ class ESGDataAnalystCrew:
         return Crew(
             agents=self.agents,
             tasks=self.tasks,
-            process=Process.sequential,
+            # process=Process.sequential ,
             verbose=True,
             # memory=True,  # Enable crew memory for better context retention
             # embedder=embedder_settings,
-            max_rpm=10,  # Rate limiting per rispettare API limits
+            # max_rpm=10,  # Rate limiting per rispettare API limits
         )
