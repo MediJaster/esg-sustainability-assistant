@@ -19,13 +19,15 @@ from esg_sustainability_assistant.crews.report_writer.report_writer import (
 from models.company_info import CompanyInfo
 
 
-mlflow.crewai.autolog()
+mlflow.crewai.autolog(log_traces=True, silent=False)
+mlflow.litellm.autolog(log_traces=True, silent=False)
+
 mlflow.set_experiment("ESG Sustainability Assistant")
 
 
 class ESGAnalysisState(BaseModel):
-    company_info: CompanyInfo = None
-
+    # Provide a default CompanyInfo for testing if none is set
+    company_info: CompanyInfo = CompanyInfo(name="Ernst & Young", industry_sector="Consultancy")
     website: str = ""
     benchmark_analysis: str = ""
     compliance_roadmap: str = ""

@@ -9,12 +9,16 @@ class Settings(BaseSettings):
     AZURE_API_BASE: str
     AZURE_API_VERSION: str
 
+    OPENAI_API_KEY: str
+
     LLM_DEPLOYMENT_NAME: str
     EMBEDDING_DEPLOYMENT_NAME: str
 
     SERPER_API_KEY: SecretStr
 
     MLFLOW_TRACKING_URI: str
+
+    STREAMLIT_API_URL: str = "http://localhost:8080"
 
 
 settings = Settings()

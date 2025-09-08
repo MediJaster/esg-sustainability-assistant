@@ -9,7 +9,7 @@ app = FastAPI()
 
 
 @app.post("/esg")
-def kickoff_crew(input: CompanyInfo) -> str:
+def kickoff_crew(input: CompanyInfo) -> dict[str, str]:
     esg_flow = ESGSustainabilityFlow(company_info=input, verbose=False)
 
     result = esg_flow.kickoff()

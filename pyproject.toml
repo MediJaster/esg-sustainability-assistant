@@ -26,3 +26,4 @@ type = "flow"
 
 [dependency-groups]
 docs = ["mkdocs-material>=9.6.18", "mkdocstrings-python>=1.18.2"]
+streamlit = ["pydantic>=2.11.7", "requests>=2.32.5", "streamlit>=1.49.1"]
