@@ -4,6 +4,9 @@ from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool, WebsiteSearchTool
 
 
+from src.settings import llm_settings, embedder_settings
+
+
 @CrewBase
 class ESGDataAnalystCrew:
     """ESG Data Analyst specialized crew for sector analysis and benchmarking"""
@@ -29,20 +32,8 @@ class ESGDataAnalystCrew:
                 SerperDevTool(),
                 WebsiteSearchTool(
                     config={
-                        "llm": {
-                            "provider": "azure_openai",
-                            "config": {
-                                "model": "gpt-4.1",
-                            },
-                        },
-                        "embedder": {
-                            "provider": "openai",
-                            "config": {
-                                "model": "text-embedding-ada-002",
-                                "api_key": os.getenv("AZURE_API_KEY"),
-                                "api_base": os.getenv("AZURE_API_BASE"),
-                            },
-                        },
+                        "llm": llm_settings,
+                        "embedder": embedder_settings,
                     }
                 ),
             ],
@@ -59,20 +50,8 @@ class ESGDataAnalystCrew:
                 SerperDevTool(),
                 WebsiteSearchTool(
                     config={
-                        "llm": {
-                            "provider": "azure_openai",
-                            "config": {
-                                "model": "gpt-4.1",
-                            },
-                        },
-                        "embedder": {
-                            "provider": "openai",
-                            "config": {
-                                "model": "text-embedding-ada-002",
-                                "api_key": os.getenv("AZURE_API_KEY"),
-                                "api_base": os.getenv("AZURE_API_BASE"),
-                            },
-                        },
+                        "llm": llm_settings,
+                        "embedder": embedder_settings,
                     }
                 ),
             ],
@@ -140,6 +119,7 @@ class ESGDataAnalystCrew:
             tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
-            memory=True,  # Enable crew memory for better context retention
+            # memory=True,  # Enable crew memory for better context retention
+            # embedder=embedder_settings,
             max_rpm=10,  # Rate limiting per rispettare API limits
         )

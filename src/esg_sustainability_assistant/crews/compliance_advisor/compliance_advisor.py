@@ -5,6 +5,8 @@ from crewai.agents.agent_builder.base_agent import BaseAgent
 from crewai_tools import SerperDevTool, WebsiteSearchTool
 from typing import List
 
+from src.settings import llm_settings, embedder_settings
+
 
 @CrewBase
 class ESGComplianceAdvisorCrew:
@@ -22,20 +24,8 @@ class ESGComplianceAdvisorCrew:
         self.search_tool = SerperDevTool()
         self.website_search_tool = WebsiteSearchTool(
             config={
-                "llm": {
-                    "provider": "azure_openai",
-                    "config": {
-                        "model": "gpt-4.1",
-                    },
-                },
-                "embedder": {
-                    "provider": "openai",
-                    "config": {
-                        "model": "text-embedding-ada-002",
-                        "api_key": os.getenv("AZURE_API_KEY"),
-                        "api_base": os.getenv("AZURE_API_BASE"),
-                    },
-                },
+                "llm": llm_settings,
+                "embedder": embedder_settings,
             }
         )
 
@@ -53,7 +43,10 @@ class ESGComplianceAdvisorCrew:
     def international_standards_advisor(self) -> Agent:
         return Agent(
             config=self.agents_config["international_standards_advisor"],
-            tools=[self.search_tool, self.website_search_tool],
+            tools=[
+                self.search_tool,
+                # self.website_search_tool
+            ],
             verbose=True,
             max_iter=3,
             memory=True,
@@ -127,6 +120,7 @@ class ESGComplianceAdvisorCrew:
             tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
-            memory=True,
+            # memory=True,
+            # embedder=embedder_settings,
             max_rpm=10,
         )

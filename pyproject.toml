@@ -9,6 +9,7 @@ dependencies = [
     "crewai[tools]>=0.165.1,<1.0.0",
     "fastapi[standard-no-fastapi-cloud-cli]>=0.116.1",
     "mlflow>=3.3.2",
+    "pydantic-settings>=2.10.1",
 ]
 
 [project.scripts]

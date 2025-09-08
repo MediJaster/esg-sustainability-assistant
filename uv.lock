@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11, <3.14"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -893,6 +893,7 @@ dependencies = [
     { name = "crewai-tools", extra = ["mcp"] },
     { name = "fastapi", extra = ["standard-no-fastapi-cloud-cli"] },
     { name = "mlflow" },
+    { name = "pydantic-settings" },
 ]
 
 [package.dev-dependencies]
@@ -907,6 +908,7 @@ requires-dist = [
     { name = "crewai-tools", extras = ["mcp"], specifier = ">=0.69.0" },
     { name = "fastapi", extras = ["standard-no-fastapi-cloud-cli"], specifier = ">=0.116.1" },
     { name = "mlflow", specifier = ">=3.3.2" },
+    { name = "pydantic-settings", specifier = ">=2.10.1" },
 ]
 
 [package.metadata.requires-dev]
