@@ -1,0 +1,6 @@
+.venv/
+db/
+docs/
+out/
+rsc/
+docker/
