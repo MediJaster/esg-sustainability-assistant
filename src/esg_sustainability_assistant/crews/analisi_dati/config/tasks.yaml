@@ -1,0 +1,99 @@
+sector_challenges_research_task:
+  description: >
+    Identify the top 1 critical ESG challenges specific to {settore}.
+    
+    Research focus:
+    1. Review recent industry reports (McKinsey, BCG, Deloitte) from last year
+    2. Find sector-specific environmental issues
+    3. Identify key social challenges (labor, diversity)
+    4. Note governance risks typical to the sector
+    
+    Use authoritative sources only.
+  expected_output: >
+    Structured report with:
+    - 3 critical ESG challenges with brief explanations
+    - Impact and urgency assessment for each
+    - Key sources used
+    Format: Brief sections for E, S, G challenges
+  agent: esg_sector_researcher
+
+competitor_best_practices_task:
+  description: >
+    Research ESG best practices from top 1-2 competitors in {settore}.
+    
+    Objectives:
+    1. Identify top ESG leaders in the sector via rankings
+    2. Document 1-2 key initiatives per leader
+    3. Find quantifiable results where available
+    4. Note common approaches
+  expected_output: >
+    Competitive analysis with:
+    - Profiles of 1-2 ESG leaders with scores/rankings
+    - 1-2 concrete initiatives per leader with results
+    - Common best practices identified
+    - Key differentiators
+    Format: Company profiles + summary table
+  agent: competitor_intelligence_analyst
+
+company_profile_research_task:
+  description: >
+    Research {azienda_nome}'s current ESG profile using public sources.
+    
+    Research areas:
+    1. Official website sustainability sections
+    2. Latest annual report ESG content
+    3. Recent ESG-related news/press releases
+    4. Public ESG certifications or ratings
+  expected_output: >
+    Company ESG profile with:
+    - Overview of existing ESG initiatives by category (E, S, G)
+    - Current certifications/standards
+    - ESG maturity level assessment (basic/intermediate/advanced)
+    - Information gaps identified
+    Format: Categorized profile with maturity assessment
+  agent: company_profile_researcher
+
+market_trends_analysis_task:
+  description: >
+    Identify 2-3 emerging sustainability trends in {settore} and key ESG metrics.
+    
+    Focus areas:
+    1. Emerging sustainable technologies for the sector
+    2. New sustainable business models
+    3. Stakeholder expectation changes
+    4. Most-used sector ESG metrics for benchmarking
+  expected_output: >
+    Trends report with:
+    - 2-3 key sustainability trends with 1-3 year timeline
+    - 3-5 most relevant sector ESG metrics for benchmarking
+    - Early adopter examples
+    - Opportunities and risks identified
+    Format: Trend summaries + metrics dashboard
+  agent: market_trends_analyst
+
+comprehensive_benchmark_synthesis_task:
+  description: >
+    Synthesize all research into actionable ESG benchmark analysis for {azienda_nome}.
+    
+    Synthesis objectives:
+    1. Compare company current state vs sector best practices
+    2. Identify top 2 priority ESG areas
+    3. Recommend key metrics for tracking
+    4. Assess readiness for emerging trends
+  expected_output: >
+    Integrated benchmark analysis with:
+    - Executive Summary with 3 key insights
+    - Gap Analysis: company vs competitors
+    - Top 2 Priority ESG Areas with rationale
+    - Recommended ESG metrics set (2-4 metrics)
+    - Competitive positioning assessment
+    - Trend readiness score
+    Format: Executive document with priority matrix
+    The final output should be structured with a first level
+    section and then with subsections as needed.
+  context:
+    - sector_challenges_research_task
+    - competitor_best_practices_task 
+    - company_profile_research_task
+    - market_trends_analysis_task
+  agent: data_synthesis_specialist

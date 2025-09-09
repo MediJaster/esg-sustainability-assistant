@@ -1,0 +1,120 @@
+executive_summary_creation_task:
+  description: >
+    Crea un Executive Summary potente e persuasivo per il report ESG dell'azienda {azienda_nome} 
+    basandoti su tutti gli output delle crew precedenti.
+    
+    Elementi chiave da includere:
+    1. Vision ESG e opportunity statement per l'azienda
+    2. Top 5 insights chiave emersi dall'analisi (benchmark + compliance + strategy)
+    3. Investment summary: budget totale e ROI atteso
+    4. Quick wins identificati (primi 6 mesi)
+    5. Strategic priorities per 12-24 mesi
+    6. Call to action chiara per il management
+    
+    Target audience: CEO, Board, C-level executives.
+    Tone: professionale, persuasivo, business-focused.
+  expected_output: >
+    Executive Summary (2-3 pagine) contenente:
+    - ESG Vision Statement personalizzata per l'azienda
+    - Key Findings: 5 insight principali con impact quantificato
+    - Investment Overview: budget summary e ROI projection
+    - Quick Wins Roadmap: azioni immediate (0-6 mesi)
+    - Strategic Priorities: focus areas per 12-24 mesi
+    - Success Metrics: KPI principali per monitoring
+    - Management Recommendations: 3-4 azioni concrete da intraprendere
+    - Executive Call to Action con next steps chiari
+    Formato: executive document con bullet points e highlight boxes
+  agent: executive_summary_writer
+
+technical_sections_editing_task:
+  description: >
+    Edita e struttura tutte le sezioni tecniche del report (Benchmark Analysis, 
+    Compliance Roadmap, Strategic Action Plan) in contenuti coerenti e professionali.
+    
+    Sezioni da editare:
+    1. Sector Benchmark & Competitive Analysis
+    2. Regulatory Compliance & Framework Mapping  
+    3. Strategic Action Plan (Environmental, Social, Governance)
+    4. Implementation Timeline & Resource Requirements
+    5. Risk Assessment & Mitigation Strategies
+    
+    Focus su: coerenza stilistica, eliminazione ridondanze, flow logico, appropriate detail level.
+  expected_output: >
+    Sezioni tecniche editate contenenti:
+    - Section 2: Sector Benchmark Analysis (gap analysis, competitor insights, market positioning)
+    - Section 3: Compliance & Framework Roadmap (mandatory regulations, voluntary standards, timeline)
+    - Section 4: Strategic ESG Initiatives (Environmental, Social, Governance programs dettagliati)
+    - Section 5: Implementation Planning (timeline, resources, governance, change management)
+    - Section 6: Risk Management (risk assessment, mitigation strategies, contingency plans)
+    - Consistent formatting, professional language, logical flow tra sezioni
+    - Technical appendices con detail implementativo quando necessario
+    Formato: structured technical sections con subsections e clear headings
+  agent: technical_content_editor
+
+data_visualization_design_task:
+  description: >
+    Progetta e descrivi dashboard, matrici e visualizzazioni che rendano 
+    i dati ESG comprensibili e actionable per il management.
+    
+    Visualizzazioni da creare (descrizione testuale):
+    1. ESG Maturity Dashboard: current state vs target state
+    2. Priority Matrix: Impact vs Effort per tutte le iniziative
+    3. Investment Timeline: budget allocation per quarter/year
+    4. ROI Projection Chart: payback periods e return curves
+    5. Compliance Timeline: normative deadlines e milestone
+    6. KPI Dashboard: metriche chiave con target e baseline
+    
+    Per ogni visualizzazione: descrivi layout, dati mostrati, insights evidenziati.
+  expected_output: >
+    Design visualizzazioni ESG con:
+    - Dashboard ESG Maturity: current vs target state con progress indicators
+    - Priority Matrix: tutte le iniziative plotted su Impact/Effort axes con color coding
+    - Investment Timeline: quarterly budget allocation con cumulative spend
+    - ROI Analysis Charts: payback periods, NPV curves, sensitivity analysis
+    - Compliance Calendar: regulatory deadlines con implementation milestones
+    - KPI Monitoring Dashboard: key metrics con baseline, target, current status
+    - Per ogni viz: detailed description, data sources, key insights highlighted
+    - Dashboard integration recommendations per ongoing monitoring
+    Formato: visualization specifications + dashboard integration guide
+  agent: data_visualization_specialist
+
+final_report_assembly_task:
+  description: >
+    Assembla tutti i componenti (Executive Summary, sezioni tecniche, visualizzazioni) 
+    in un documento ESG finale coeso e professionale per l'azienda {azienda_nome}.
+    
+    Struttura finale del report:
+    1. Executive Summary
+    2. Introduction & Methodology  
+    3. Current State Analysis (Benchmark + Company Profile)
+    4. Compliance & Framework Requirements
+    5. Strategic ESG Action Plan
+    6. Implementation Roadmap
+    7. Investment & ROI Analysis
+    8. Risk Management
+    9. Success Metrics & Monitoring
+    10. Conclusions & Next Steps
+    11. Appendices (Technical details)
+    
+    Focus finale: professional formatting, consistent style, ready-to-present quality.
+  expected_output: >
+    Report ESG finale completo in Markdown contenente:
+    - Cover page con company info e report metadata
+    - Table of contents con page references
+    - Executive Summary (da task 1)
+    - Introduction: methodology, scope, assumptions
+    - Tutte le sezioni tecniche editate (da task 2)
+    - Visualization descriptions integrate nel testo (da task 3)
+    - Consistent formatting: headers, subheaders, bullet points, tables
+    - Professional language e business-appropriate tone
+    - Clear navigation con internal links
+    - Actionable conclusions con specific next steps
+    - Technical appendices per implementation details
+    - Document metadata: version, date, authors, confidentiality
+    Formato: complete professional report ready for C-level presentation
+  context: 
+      - executive_summary_creation_task
+      - technical_sections_editing_task 
+      - data_visualization_design_task
+      
+  agent: final_report_assembler

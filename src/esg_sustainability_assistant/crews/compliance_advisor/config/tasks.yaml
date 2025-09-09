@@ -1,0 +1,65 @@
+mandatory_regulations_mapping_task:
+  description: >
+    Quick mapping of ESG regulations for {azienda_nome} in {settore}.
+    Check: CSRD, EU Taxonomy, top 2 national regulations, supply chain rules.
+    Simple yes/no applicability assessment only.
+    
+  expected_output: >
+    Basic regulation table:
+    - 2-3 key regulations with Yes/No/Maybe status
+    - Next 12 months deadlines
+    - Top 3 immediate priorities
+    Format: Simple table + priority list
+  agent: regulatory_framework_specialist
+
+voluntary_standards_selection_task:
+  description: >
+    Select top 2 ESG frameworks for {settore}.
+    Quick check: GRI, SASB, TCFD only.
+    Focus on best fit + ease of start.
+    
+  expected_output: >
+    Framework recommendations:
+    - Top 1 frameworks with brief why
+    - Easy/Medium/Hard to implement
+    - Which one to start first
+    Format: 1-framework summary + start advice
+  agent: international_standards_advisor
+
+sector_specific_requirements_task:
+  description: >
+    Find 3-5 critical sector ESG requirements for {settore}.
+    Focus on must-have certifications + key industry standards.
+    Quick competitive check.
+    
+  expected_output: >
+    Sector essentials:
+    - Top 2-3 sector requirements
+    - 1-2 priority certifications  
+    - Brief competitor insight
+    Format: Priority list + cert recommendations
+  agent: sector_compliance_analyst
+
+comprehensive_compliance_roadmap_task:
+  description: >
+    Combine all inputs into 12-month actionable roadmap for {azienda_nome}.
+    Create simple timeline: Phase 1 (0-6m) + Phase 2 (6-18m).
+    Focus on actionable priorities only.
+    
+  context: 
+    - mandatory_regulations_mapping_task
+    - voluntary_standards_selection_task
+    - sector_specific_requirements_task
+    
+  expected_output: >
+    Final roadmap:
+    - Executive summary (key priorities)
+    - Phase 1 (0-6m): Must-dos + quick wins
+    - Phase 2 (6-18m): Framework implementation
+    - Resource needs summary
+    - Top 4 success metrics
+    - Top 3 risks if delayed
+    Format: Executive summary + 2-phase plan + metrics.
+    The final output should be structured with a first level
+    section and then with subsections as needed.
+  agent: compliance_synthesis_expert

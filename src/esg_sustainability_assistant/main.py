@@ -1,39 +1,453 @@
+#!/usr/bin/env python
+"""Workflow orchestration for the ESG Sustainability Assistant.
+
+Defines the state, the Flow implementation, and helper functions to kickoff
+the full analysis and to plot the workflow graph.
+"""
 from pydantic import BaseModel
 
-from crewai.flow import Flow, listen, start
+import mlflow
+from crewai.flow import Flow, start, listen
 
-from models.esg_info import ESGInfo
+from esg_sustainability_assistant.crews.analisi_dati.analisi_dati import (
+    ESGDataAnalystCrew,
+)
+from esg_sustainability_assistant.crews.compliance_advisor.compliance_advisor import (
+    ESGComplianceAdvisorCrew,
+)
+from esg_sustainability_assistant.crews.sustainabilty_strategist.sustainability_strategist import (
+    SustainabilityStrategistCrew,
+)
+from esg_sustainability_assistant.crews.report_writer.report_writer import (
+    ReportWriterCrew,
+)
+from models.company_info import CompanyInfo
 
-from .crews.data_analysis.data_analysis import ESGAnalysisCrew
+
+mlflow.crewai.autolog(log_traces=True, silent=False)
+mlflow.litellm.autolog(log_traces=True, silent=False)
+
+mlflow.set_experiment("ESG Sustainability Assistant")
 
 
-class ESGState(BaseModel):
-    esg_info: ESGInfo = None
+class ESGAnalysisState(BaseModel):
+    """
+    State object for the ESG analysis workflow.
 
-    preliminary_analysis: str = ""
+    Parameters
+    ----------
+    company_info : CompanyInfo
+        Company information for the ESG analysis.
+    website : str
+        Website URL of the company.
+    benchmark_analysis : str
+        Results of ESG benchmarking and market research.
+    compliance_roadmap : str
+        Regulatory compliance roadmap.
+    strategic_plan : str
+        Strategic action plan for sustainability.
+    final_report : str
+        Final ESG report.
+
+    Returns
+    -------
+    ESGAnalysisState
+        Instance representing the current state of the ESG analysis.
+
+    Examples
+    --------
+    >>> ESGAnalysisState()
+    ESGAnalysisState(company_info=CompanyInfo(name='Ernst & Young', industry_sector='Consultancy'), website='', benchmark_analysis='', compliance_roadmap='', strategic_plan='', final_report='')
+    """
+
+    # Provide a default CompanyInfo for testing if none is set
+    company_info: CompanyInfo = CompanyInfo(
+        name="Ernst & Young", industry_sector="Consultancy"
+    )
+    website: str = ""
+    benchmark_analysis: str = ""
+    compliance_roadmap: str = ""
+    strategic_plan: str = ""
+    final_report: str = ""
 
 
-class ESGFlow(Flow[ESGState]):
+class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
+    """
+    Complete ESG analysis workflow orchestrating 4 specialized crews.
+
+    This flow executes the following steps:
+        1. Data Analysis - Benchmark and market research
+        2. Compliance Mapping - Regulatory requirements and frameworks
+        3. Strategic Planning - Action plans and initiatives
+        4. Report Generation - Final comprehensive report
+
+    Parameters
+    ----------
+    state : ESGAnalysisState
+        The state object holding all intermediate and final results.
+
+    Returns
+    -------
+    ESGSustainabilityFlow
+        Instance of the ESG workflow.
+
+    Notes
+    -----
+    Each step is O(1) with respect to the number of workflow steps, but the underlying crew operations may have higher complexity depending on implementation.
+    """
+
     @start()
-    def generate_preliminary_analysis(self):
-        data_analysis_crew = ESGAnalysisCrew()
-        result = data_analysis_crew.crew().kickoff(
-            inputs=self.state.esg_info.model_dump()
-        )
+    def run_data_analysis(self):
+        """
+        Step 1: ESG Data Analysis and Benchmarking.
 
-        self.state.preliminary_analysis = result.raw
+        Returns
+        -------
+        str
+            Status message ("Data analysis completed").
 
-        return self.state.preliminary_analysis
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_data_analysis()
+        'Data analysis completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
+        import mlflow
+
+        print("\n📊 STEP 1: ESG Data Analysis...")
+        print("Tasks: Market research, competitor analysis, ESG benchmarking")
+        print("-" * 60)
+
+        with mlflow.start_run(run_name="Data Analysis", nested=True):
+            mlflow.log_param("step", "data_analysis")
+            mlflow.log_param("azienda_nome", self.state.company_info.name)
+            mlflow.log_param("settore", self.state.company_info.industry_sector)
+
+            if not hasattr(self, "data_analyst_crew") or self.data_analyst_crew is None:
+                self.data_analyst_crew = ESGDataAnalystCrew()
+
+            result = self.data_analyst_crew.crew().kickoff(
+                inputs={
+                    "azienda_nome": self.state.company_info.name,
+                    "settore": self.state.company_info.industry_sector,
+                }
+            )
+
+            self.state.benchmark_analysis = str(result)
+            mlflow.log_param(
+                "benchmark_analysis",
+                self.state.benchmark_analysis
+                if len(str(self.state.benchmark_analysis)) < 500
+                else str(self.state.benchmark_analysis)[:500] + "...",
+            )
+            print("✅ Data analysis completed")
+        return "Data analysis completed"
+
+    @listen(run_data_analysis)
+    def run_compliance_mapping(self, _):
+        """
+        Step 2: Compliance & Framework Mapping.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        str
+            Status message ("Compliance mapping completed").
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_compliance_mapping(None)
+        'Compliance mapping completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
+        import mlflow
+
+        print("\n⚖️ STEP 2: Compliance & Framework Mapping...")
+        print("Tasks: Regulatory mapping, standards selection, compliance roadmap")
+        print("-" * 60)
+
+        with mlflow.start_run(run_name="Compliance Mapping", nested=True):
+            mlflow.log_param("step", "compliance_mapping")
+            mlflow.log_param("azienda_nome", self.state.company_info.name)
+            mlflow.log_param("settore", self.state.company_info.industry_sector)
+            mlflow.log_param(
+                "benchmark_analysis",
+                self.state.benchmark_analysis
+                if len(str(self.state.benchmark_analysis)) < 500
+                else str(self.state.benchmark_analysis)[:500] + "...",
+            )
+
+            if not hasattr(self, "compliance_crew") or self.compliance_crew is None:
+                self.compliance_crew = ESGComplianceAdvisorCrew()
+
+            result = self.compliance_crew.crew().kickoff(
+                inputs={
+                    "azienda_nome": self.state.company_info.name,
+                    "settore": self.state.company_info.industry_sector,
+                    "benchmark_analysis": self.state.benchmark_analysis,
+                }
+            )
+
+            self.state.compliance_roadmap = str(result)
+            mlflow.log_param(
+                "compliance_roadmap",
+                self.state.compliance_roadmap
+                if len(str(self.state.compliance_roadmap)) < 500
+                else str(self.state.compliance_roadmap)[:500] + "...",
+            )
+            print("✅ Compliance mapping completed")
+        return "Compliance mapping completed"
+
+    @listen(run_compliance_mapping)
+    def run_strategic_planning(self, _):
+        """
+        Step 3: Strategic Action Planning.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        str
+            Status message ("Strategic planning completed").
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> flow.run_strategic_planning(None)
+        'Strategic planning completed'
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
+        import mlflow
+
+        print("\n💡 STEP 3: Strategic Action Planning...")
+        print("Tasks: Initiative design, impact quantification, strategic roadmap")
+        print("-" * 60)
+
+        with mlflow.start_run(run_name="Strategic Planning", nested=True):
+            mlflow.log_param("step", "strategic_planning")
+            mlflow.log_param("azienda_nome", self.state.company_info.name)
+            mlflow.log_param("settore", self.state.company_info.industry_sector)
+            mlflow.log_param(
+                "benchmark_analysis",
+                self.state.benchmark_analysis
+                if len(str(self.state.benchmark_analysis)) < 500
+                else str(self.state.benchmark_analysis)[:500] + "...",
+            )
+            mlflow.log_param(
+                "compliance_roadmap",
+                self.state.compliance_roadmap
+                if len(str(self.state.compliance_roadmap)) < 500
+                else str(self.state.compliance_roadmap)[:500] + "...",
+            )
+
+            if not hasattr(self, "strategist_crew") or self.strategist_crew is None:
+                self.strategist_crew = SustainabilityStrategistCrew()
+
+            result = self.strategist_crew.crew().kickoff(
+                inputs={
+                    "azienda_nome": self.state.company_info.name,
+                    "settore": self.state.company_info.industry_sector,
+                    "benchmark_analysis": self.state.benchmark_analysis,
+                    "compliance_roadmap": self.state.compliance_roadmap,
+                }
+            )
+
+            self.state.strategic_plan = str(result)
+            mlflow.log_param(
+                "strategic_plan",
+                self.state.strategic_plan
+                if len(str(self.state.strategic_plan)) < 500
+                else str(self.state.strategic_plan)[:500] + "...",
+            )
+            print("✅ Strategic planning completed")
+        return "Strategic planning completed"
+
+    @listen(run_strategic_planning)
+    def generate_final_report(self, _):
+        """
+        Step 4: Final Report Creation.
+
+        Parameters
+        ----------
+        _ : Any
+            Placeholder for event argument (unused).
+
+        Returns
+        -------
+        dict
+            Dictionary with keys: 'benchmark_analysis', 'compliance_roadmap',
+            'strategic_action_plan', 'final_report', 'trace_id'.
+
+        Examples
+        --------
+        >>> flow = ESGSustainabilityFlow()
+        >>> result = flow.generate_final_report(None)
+        >>> isinstance(result, dict)
+        True
+
+        Notes
+        -----
+        Complexity: O(1) for orchestration; underlying crew logic may vary.
+        Raises
+        ------
+        AttributeError
+            If crew instantiation fails.
+        """
+        import mlflow
+
+        print("\n✍️ STEP 4: Final Report Creation...")
+        print("Tasks: Report synthesis, executive summary, recommendations")
+        print("-" * 60)
+
+        with mlflow.start_run(run_name="Final Report", nested=True):
+            mlflow.log_param("step", "final_report")
+            mlflow.log_param("azienda_nome", self.state.company_info.name)
+            mlflow.log_param("settore", self.state.company_info.industry_sector)
+            mlflow.log_param(
+                "benchmark_analysis",
+                self.state.benchmark_analysis
+                if len(str(self.state.benchmark_analysis)) < 500
+                else str(self.state.benchmark_analysis)[:500] + "...",
+            )
+            mlflow.log_param(
+                "compliance_roadmap",
+                self.state.compliance_roadmap
+                if len(str(self.state.compliance_roadmap)) < 500
+                else str(self.state.compliance_roadmap)[:500] + "...",
+            )
+            mlflow.log_param(
+                "strategic_plan",
+                self.state.strategic_plan
+                if len(str(self.state.strategic_plan)) < 500
+                else str(self.state.strategic_plan)[:500] + "...",
+            )
+
+            # if (
+            #     not hasattr(self, "report_writer_crew")
+            #     or self.report_writer_crew is None
+            # ):
+            #     self.report_writer_crew = ReportWriterCrew()
+
+            # result = self.report_writer_crew.crew().kickoff(
+            #     inputs={
+            #         "azienda_nome": self.state.company_info.name,
+            #         "settore": self.state.company_info.industry_sector,
+            #         "benchmark_analysis": self.state.benchmark_analysis,
+            #         "compliance_roadmap": self.state.compliance_roadmap,
+            #         "strategic_plan": self.state.strategic_plan,
+            #     }
+            # )
+
+            result = self.state.benchmark_analysis + "\n\n"
+            result += self.state.compliance_roadmap + "\n\n"
+            result += self.state.strategic_plan
+
+            self.state.final_report = str(result)
+            mlflow.log_param(
+                "final_report",
+                self.state.final_report
+                if len(str(self.state.final_report)) < 500
+                else str(self.state.final_report)[:500] + "...",
+            )
+
+            print("\n🎉 ESG ANALYSIS COMPLETE!")
+            print("📄 Final report: complete_esg_sustainability_report.md")
+            print("=" * 80)
+
+        return {
+            "benchmark_analysis": self.state.benchmark_analysis,
+            "compliance_roadmap": self.state.compliance_roadmap,
+            "strategic_action_plan": self.state.strategic_plan,
+            "final_report": self.state.final_report,
+            "trace_id": mlflow.get_active_trace_id(),
+        }
 
 
 def kickoff():
-    esg_flow = ESGFlow()
-    esg_flow.kickoff()
+    """
+    Execute the complete ESG analysis flow with full mlflow tracing.
+
+    Returns
+    -------
+    dict
+        Dictionary with final ESG analysis results.
+
+    Examples
+    --------
+    >>> result = kickoff()
+    >>> isinstance(result, dict)
+    True
+
+    Notes
+    -----
+    Complexity: O(1) for orchestration; underlying crew logic may vary.
+    Raises
+    ------
+    Exception
+        If any step in the flow fails.
+    """
+    import mlflow
+
+    with mlflow.start_run(run_name="ESG Full Analysis", nested=False) as parent_run:
+        mlflow.log_param("company_name", "Ernst & Young")
+        mlflow.log_param("industry_sector", "Consultancy")
+        flow = ESGSustainabilityFlow()
+        result = flow.kickoff()
+        # Log final outputs as artifacts or params
+        if isinstance(result, dict):
+            for k, v in result.items():
+                mlflow.log_param(k, v if len(str(v)) < 500 else str(v)[:500] + "...")
+        return result
 
 
 def plot():
-    esg_flow = ESGFlow()
-    esg_flow.plot()
+    """
+    Generate flow visualization.
+
+    Returns
+    -------
+    None
+
+    Examples
+    --------
+    >>> plot()
+
+    Notes
+    -----
+    Complexity: O(1).
+    """
+    flow = ESGSustainabilityFlow()
+    flow.plot()
 
 
 if __name__ == "__main__":
