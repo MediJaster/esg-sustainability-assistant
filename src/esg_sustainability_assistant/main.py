@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""Workflow orchestration for the ESG Sustainability Assistant.
+
+Defines the state, the Flow implementation, and helper functions to kickoff
+the full analysis and to plot the workflow graph.
+"""
 from pydantic import BaseModel
 
 import mlflow

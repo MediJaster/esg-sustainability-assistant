@@ -1,4 +1,4 @@
-# ESG Sustainability Assistant - EU AI Act Application Documentation
+## ESG Sustainability Assistant - EU AI Act Application Documentation
 
 **Application Owner**: Giorgio [giorgio@email.com]
 <br>**Document Version**: v1.0.0 (2025-09-09)

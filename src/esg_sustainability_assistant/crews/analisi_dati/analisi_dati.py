@@ -1,3 +1,5 @@
+"""Crew for ESG data analysis and benchmarking."""
+
 import os
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task

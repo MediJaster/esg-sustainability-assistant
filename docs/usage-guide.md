@@ -1,4 +1,4 @@
-# Guida all'uso
+## Guida all'uso
 
 Benvenuto nella guida all'uso del progetto! Questa guida ti fornirà le informazioni necessarie per iniziare a utilizzare il progetto in modo efficace
 

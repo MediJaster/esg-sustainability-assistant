@@ -1,3 +1,5 @@
+"""Crew for ESG compliance mapping and framework selection."""
+
 import os
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task

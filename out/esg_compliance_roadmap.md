@@ -1,122 +1,102 @@
----
-
-# 12-Month ESG Compliance Roadmap for Ernst & Young (EU)  
-**(Structured – Phase 1: 0-6 months, Phase 2: 6-18 months)**
+# ESG Compliance Roadmap per "Patate al Forno" (PMI Food Production 2024-2025)
 
 ---
 
-## Executive Summary: Key Priorities
+## Executive Summary – Key Priorities
 
-Ernst & Young (EY) faces a crucial 12-month window to deliver robust ESG and sustainability disclosures in line with new, mandatory EU regulations. Immediate legal obligations derive from the CSRD (Corporate Sustainability Reporting Directive), ESRS (European Sustainability Reporting Standards), and the EU Taxonomy. CSDDD (Corporate Sustainability Due Diligence Directive) will likely apply soon and demands urgent capacity building on supply chain due diligence. The competitive landscape shows all major consulting firms have launched cross-functional ESG steering teams, commenced double materiality assessments, and begun integrating reporting frameworks.
+Nei prossimi 18 mesi la PMI "patate al forno" non è soggetta ad obblighi ESG normativi diretti (CSRD, Tassonomia, CSDDD), ma è cruciale prepararsi per:
+- Dare risposta proattiva alle pressioni della supply chain e della clientela (specialmente se grandi aziende o fornitori internazionali).
+- Rafforzare la competitività attraverso certificazioni di food safety e trasparenza ESG basilare, mostrando conformità volontaria alle best practice.
+- Limitare i rischi di esclusione dai mercati premium e da partnership bancarie/industriali, posizionandosi come player affidabile e sostenibile.
 
-**Key actionable priorities:**
-- Deliver CSRD-aligned (FY2024) ESG reporting by 2025, establishing GRI as the disclosure backbone and embedding ESRS requirements.
-- Map and align consulting activities and operations to the EU Taxonomy to enable parallel legal disclosures.
-- Accelerate readiness for CSDDD with early gap analysis, value chain mapping, and preliminary due diligence processes.
-- Integrate TCFD-aligned climate risk management and scenario analysis to meet cross-framework expectations.
-- Activate ESG data governance infrastructure, cross-mapped to financial and operational reporting.
-- Engage internal/external stakeholders and prepare for external assurance and audit.
-- Benchmark and update policies/processes to current Big 4 and sector best-in-class standards.
-
----
-
-## Phase 1 (0-6 Months): Must-Dos & Quick Wins
-
-**1. Governance & Team Setup**
-   - Form ESG/CSRD Steering Committee with dedicated leads for ESRS, Taxonomy, and CSDDD.
-   - Assign cross-functional project managers (finance, risk, HR, sustainability, legal) for each reporting workstream.
-
-**2. GRI Framework Rollout & Materiality**
-   - Conduct an enterprise-wide GRI materiality assessment (covering latest GRI and aligned with ESRS double materiality approach).
-   - Engage business leaders to identify and validate key ESG topics under GRI, ESRS, and sector context (professional services).
-
-**3. Data Gap Analysis & CSRD Alignment**
-   - Run a detailed data gap analysis: map all existing ESG data (GRI or other) to ESRS requirements.
-   - Identify missing disclosure fields, especially across climate (ESRS E1), workforce (S1), and governance (G1-2) standards.
-
-**4. Parallel EU Taxonomy Preparation**
-   - Map revenue, CapEx, and OpEx to eligible consulting activities under EU Taxonomy.
-   - Pilot internal process for financial data capture, disclosure, and draft initial eligibility/alignment score.
-
-**5. CSDDD Applicability & Preliminary Action**
-   - Clarify EY legal/entity scope for CSDDD.
-   - Start high-level value chain mapping and risk exposure scan—identify top-priority suppliers/partners for due diligence testing.
-
-**6. TCFD Integration**
-   - Launch TCFD-aligned climate risk and scenario assessment workstream.
-   - Establish governance, responsibilities, and project timeline for TCFD reporting (embed into CSRD/ESRS E1 process).
-
-**7. Stakeholder Engagement & Change Management**
-   - Communicate roadmap and legal requirements to internal stakeholders.
-   - Run targeted interviews/workshops with key functions (risk, compliance, people, procurement, client-facing teams).
-
-**8. Quick Wins**
-   - Deploy ESG data dashboards tracking core CSRD/ESRS and Taxonomy metrics.
-   - Publicly commit to ESG reporting timeline and scope (executive statement, stakeholder Q&A).
-   - Begin policy refresh on Code of Conduct, supply chain expectations, and responsible business.
+**Le azioni cardine per i prossimi 12 mesi sono:**
+- Monitoraggio dell’evoluzione normativa e benchmark di settore.
+- Adozione progressiva del framework GRI su temi ESG chiave (con report ESG snello focalizzato su food safety, ambiente, social compliance).
+- Consolidamento delle certificazioni food safety già in essere (SQF/BRC/IFS), migliorando la gestione dei dati e la trasparenza documentale.
+- Pronto upgrade dei processi e delle metriche ESG (SASB) se richiesto da clienti leader o nuovi partner internazionali.
 
 ---
 
-## Phase 2 (6-18 Months): Framework Implementation & Deep Integration
+## 1. Roadmap Fase 1 (0-6 mesi): Must-Dos & Quick Wins
 
-**1. Full CSRD / ESRS Implementation**
-   - Complete data collection and quality assurance covering all mandatory ESRS topics and cross-cutting requirements.
-   - Draft and iterate first CSRD/ESRS-compliant sustainability report for FY2024 (target publication: 2025).
-   - Engage with external auditors/assurance providers for pre-assurance, addressing gaps early.
+**Obiettivo:** Mettere in sicurezza compliance food safety e avviare la “base” ESG per richieste volontarie e credibilità sul mercato.
 
-**2. EU Taxonomy Reporting**
-   - Calculate and finalize disclosure of eligible/aligned revenue, CapEx, OpEx for first 2024 reports.
-   - Refine process for ongoing annual taxonomy data capture and thematic reviews, integrated with finance.
+### 1.1. Monitoraggio e Preparazione
+- **Monitorare l’evoluzione dei criteri dimensionali e normativi (CSRD, CSDDD)**, specialmente in relazione a partnership con grandi aziende.
+- **Mappatura degli stakeholder chiave:** Identificare clienti strategici, fornitori critici, banche/partner che potrebbero richiedere evidenze ESG.
+- **Raccolta delle policy e documentazioni esistenti:** Food safety, ambientali, sociali.
 
-**3. Full CSDDD / Supply Chain Due Diligence Rollout**
-   - Deploy or upgrade Supplier Code of Conduct and onboarding protocols reflecting EU requirements.
-   - Launch supplier/partner ESG risk assessments, grievance mechanisms, and monitoring tools.
-   - Document due diligence processes, mitigation plans, and stakeholder engagement outcomes.
+### 1.2. Certificazioni Food Safety
+- **Rinnovo e consolidamento delle certificazioni SQF/BRC/IFS.**
+    - Audit interni e esterni per garantire il mantenimento delle certificazioni.
+    - Aggiornamento procedure su tracciabilità, HACCP, gestione allergeni.
 
-**4. TCFD-based Climate Disclosure**
-   - Finalize TCFD physical/transition scenario analysis and disclose financial impacts, governance, and risk management approach in alignment with CSRD E1.
-   - Integrate findings into business planning, capital allocation, and client engagement as best-in-class evidence.
+### 1.3. Avvio Reporting ESG (Versione Semplificata GRI)
+- **Valutazione di materialità semplificata** (identificare 3-4 temi centrali: ad es. gestione rifiuti, food waste, energia, sicurezza alimentare).
+- **Produzione del primo “ESG Disclosure” snello**:
+    - Impatti ambientali principali (scarti, consumo energia, emissioni).
+    - Social compliance base (rispetto normativa lavoro, sicurezza).
+    - Governance minima (policy etica, tracciabilità, ruoli).
+- **Analisi gap rispetto alle best practice dei leader di settore (Kraft Heinz, Sysco, GateGroup).**
 
-**5. Policy & Certification Enhancements**
-   - Seek ISO 14001/37301 or similar “gold standard” certification if strategic and resource-appropriate.
-   - Update and disclose all internal ESG and compliance policies in line with sector/peer best practice.
-
-**6. Digitalization & Data Governance**
-   - Embed ESG data capture into enterprise reporting systems (ERP, CRM, HRIS, procurement).
-   - Leverage live dashboards and analytics to support internal management, reporting accuracy, and external assurance.
-
-**7. Stakeholder Reporting & External Communication**
-   - Prepare and publish the inaugural CSRD/ESRS-compliant sustainability report (FY2024 performance, released 2025).
-   - Launch stakeholder communications campaign targeting clients, employees, investors, and regulators.
-   - Address feedback and prepare continuous improvement plan for subsequent reporting cycles.
+### 1.4. Quick Wins
+- **Aggiornamento della documentazione di etichettatura e processi ambientali.**
+- **Coinvolgimento staff e formazione interna su food safety ed ESG base.**
+- **Raccolta sistematica dati chiave per tracking (food waste, consumi energetici, audit non-conformità).**
 
 ---
 
-## Resource Needs Summary
+## 2. Roadmap Fase 2 (6-18 mesi): Framework Implementation & Evoluzione
 
-- **Project Management & Reporting**: Dedicated project management office (PMO) for ESG/CSRD delivery (min. 1 FTE program manager, report writers, data analysts).
-- **Subject Matter Experts**: Internal/external ESRS, GRI, EU Taxonomy, TCFD experts; specialist legal/compliance counsel for CSDDD.
-- **IT & Data Governance**: Upgraded data management tools, ESG software, and reporting dashboards.
-- **Training / Change Management**: Regular training modules for business functions, procurement, risk management staff.
-- **External Assurance**: Budget and engagement with recognized assurance provider for ESG pre-audit and report validation.
+**Obiettivo:** Strutturare e consolidare un sistema di gestione ESG efficace e scalabile, pronto a future richieste normative o di mercato.
 
----
+### 2.1. Implementazione strutturata del Framework GRI “Core Option”
+- **Formalizzazione del processo di valutazione di materialità annuale.**
+- **Estensione della raccolta dati su indicatori ESG:** Raccolta avanzata su rifiuti, risorse, social compliance, coinvolgimento stakeholder.
+- **Avvio report pubblico/trasparente ESG “mini-bilancio” annuale.**
 
-## Top 4 Success Metrics
+### 2.2. Integrazione metriche SASB (Food Sector) – Su richiesta/necessità di partner esteri
+- **Valutare l’estensione delle metriche secondo SASB** (es. ingredient sourcing, packaging, energy, food safety recall metrics) previo input da maggiore supply chain/investitori.
+- **Ottimizzare sistemi di raccolta dati per future richieste di comparabilità (es. report ESG per grandi clienti/mercati UE o UK/US).**
 
-1. **On-time CSRD/ESRS-compliant report publication for FY2024** (delivered by regulatory deadline in 2025).
-2. **Full, auditable EU Taxonomy alignment calculations disclosed** (all relevant financial metrics reported).
-3. **Documented, operational ESG due diligence system covering top 80% of value chain** (ready for CSDDD).
-4. **Internal/external stakeholder satisfaction scores with ESG reporting process** (surveyed post-publication).
+### 2.3. Rafforzamento controllo e compliance filiera
+- **Avvio o aggiornamento “Codice Etico Fornitori”** in linea con best practice ESG.
+- **Pianificazione di audit ridotti su fornitori critici (social & environmental baseline assessment).**
 
----
-
-## Top 3 Risks if Delayed
-
-1. **Regulatory breach leading to fines, reputational damage, and possible loss of public or private tenders** (especially for high-profile advisory work).
-2. **Inability to obtain clean external assurance/adult on ESG reports** (undermining investor/client trust and jeopardizing license to operate).
-3. **Falling behind sector leaders**—damaged competitive position versus Big 4 and top-tier consulting peers; loss of ESG-minded clients and talent.
+### 2.4. Innovazione e automazione documentazione/processi ESG
+- **Digitalizzazione sistemi di tracciamento ambientale e rifiuti.**
+- **Formazione continua della forza lavoro su ESG e responsabilità sociale.**
+- **Aggiornamento continuo delle policy aziendali sulla base delle evoluzioni di filiera e valutazione periodica dei rischi.**
 
 ---
 
-This roadmap, if sequenced as above, ensures that Ernst & Young will not only meet but lead the EU consulting sector on ESG, compliance, and sustainability, turning regulatory challenge into market opportunity.
+## 3. Resource Needs Summary
+
+- **Responsabile food safety e qualità dedicato (interno o consulente esterno).**
+- **Figura interna incaricata ESG/reporting (o temporary management in start-up).**
+- **Piccolo budget per formazione (food safety + ESG awareness).**
+- **Piattaforma digitale di base per raccolta dati ESG e gestione documentazione (foglio di calcolo strutturato o software entry-level).**
+- **Supporto consulenziale puntuale per gap analysis rispetto a GRI/SASB e aggiornamenti normativi.**
+
+---
+
+## 4. Top 4 Success Metrics
+
+1. **Mantenimento delle certificazioni food safety** (SQF/BRC/IFS) senza non-conformità gravi.
+2. **Pubblicazione di almeno un ESG disclosure aziendale** (GRI Core Option, versione semplificata) entro 12 mesi.
+3. **Riduzione documentata food waste e scarti** (%) rispetto al baseline iniziale (>5% miglioramento).
+4. **Audit di conformità sociale e ambientale eseguiti su almeno il 75% dei fornitori critici.**
+
+---
+
+## 5. Top 3 Risks if Delayed
+
+1. **Esclusione da partnership o grandi clienti** che richiedono sempre più evidenze ESG e certificazioni di filiera.
+2. **Ridotto accesso a finanziamenti e rating bancari**: molte banche leader chiedono ormai un reporting ESG anche semplificato per la continuità/estensione dei finanziamenti o condizioni agevolate.
+3. **Impatto reputazionale e perdita di competitività** verso competitor già attivi su ESG (rischio “last mover” e impossibilità di accesso a mercati premium con requisiti ambientali/sociali avanzati).
+
+---
+
+# Sintesi finale: Actionable Compliance Map
+
+La roadmap guida l’azienda "patate al forno" verso una compliance ESG progressiva, pragmaticamente orientata verso le richieste del mercato, senza carichi eccessivi, ma con massima readiness verso il futuro normativo e competitivo del settore food. In 18 mesi l’azienda può posizionarsi quale interlocutore affidabile e innovativo sia per clientela tradizionale sia per partner moderni, minimizzando i rischi ed elevando sostenibilità e reputazione.

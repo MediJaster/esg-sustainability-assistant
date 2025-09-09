@@ -1,3 +1,21 @@
+"""
+Streamlit UI for the ESG Sustainability Assistant.
+
+This module provides a simple interface to submit company information,
+request an ESG report from the backend API, and optionally send user feedback.
+
+Environment Variables
+---------------------
+STREAMLIT_API_URL : str, optional
+    Base URL of the backend API. Defaults to ``"http://localhost:8080"``.
+
+Notes
+-----
+This module is intended to be executed by Streamlit and does not expose
+public functions. The code path runs at import time in the Streamlit app
+runtime.
+"""
+
 import os
 import requests
 
@@ -33,16 +51,16 @@ if st.session_state.final_report is None:
                 )
 
                 try:
-                    # result = requests.post(
-                    #     f"{STREAMLIT_API_URL}/esg", json=company_info.model_dump()
-                    # ).json()
+                    result = requests.post(
+                        f"{STREAMLIT_API_URL}/esg", json=company_info.model_dump()
+                    ).json()
 
-                    # esg_report = ESGResponse.model_validate(result)
+                    esg_report = ESGResponse.model_validate(result)
 
-                    esg_report = ESGResponse(
-                        final_report="This is a placeholder ESG report.",
-                        trace_id="12345",
-                    )
+                    # esg_report = ESGResponse(
+                    #     final_report="This is a placeholder ESG report.",
+                    #     trace_id="12345",
+                    # )
 
                     st.session_state.final_report = esg_report.final_report
                     st.session_state.trace_id = esg_report.trace_id

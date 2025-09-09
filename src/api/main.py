@@ -1,3 +1,5 @@
+"""FastAPI routes for ESG report generation and feedback endpoints."""
+
 import mlflow
 from fastapi import FastAPI, HTTPException
 
@@ -9,7 +11,7 @@ from models.inference import ESGResponse
 from models.feedback import FeedbackData
 
 
-app = FastAPI()
+app = FastAPI(title="ESG Sustainability Assistant API")
 
 
 @app.post("/esg", tags=["Inference"])

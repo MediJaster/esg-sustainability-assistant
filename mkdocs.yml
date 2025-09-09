@@ -19,3 +19,44 @@ theme:
           toggle:
               icon: material/brightness-4
               name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - src
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_signature: true
+            separate_signature: true
+            show_root_full_path: false
+            merge_init_into_class: true
+            heading_level: 2
+            inherited_members: true
+            show_if_no_docstring: true
+
+nav:
+  - Home: index.md
+  - Usage: usage-guide.md
+  - EU AI Act: eu-ai-act-application-documentation.md
+  - API Reference:
+      - Overview: api/index.md
+      - FastAPI:
+          - api.main: api/src.api.main.md
+      - Core Flow:
+          - esg_sustainability_assistant.main: api/src.esg_sustainability_assistant.main.md
+          - settings: api/src.settings.md
+      - Crews:
+          - analisi_dati: api/src.esg_sustainability_assistant.crews.analisi_dati.analisi_dati.md
+          - compliance_advisor: api/src.esg_sustainability_assistant.crews.compliance_advisor.compliance_advisor.md
+          - report_writer: api/src.esg_sustainability_assistant.crews.report_writer.report_writer.md
+          - sustainability_strategist: api/src.esg_sustainability_assistant.crews.sustainabilty_strategist.sustainability_strategist.md
+      - Tools:
+          - custom_tool: api/src.esg_sustainability_assistant.tools.custom_tool.md
+      - Models:
+          - company_info: api/src.models.company_info.md
+          - inference: api/src.models.inference.md
+          - feedback: api/src.models.feedback.md
