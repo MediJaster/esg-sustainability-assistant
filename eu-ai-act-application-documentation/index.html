@@ -1,0 +1,2934 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://esg-sustainability-assistant.github.io/eu-ai-act-application-documentation/">
+      
+      
+        <link rel="prev" href="../usage-guide/">
+      
+      
+        <link rel="next" href="../api/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>EU AI Act - ESG Sustainability Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#esg-sustainability-assistant-eu-ai-act-application-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ESG Sustainability Assistant" class="md-header__button md-logo" aria-label="ESG Sustainability Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ESG Sustainability Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EU AI Act
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ESG Sustainability Assistant" class="md-nav__button md-logo" aria-label="ESG Sustainability Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ESG Sustainability Assistant
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EU AI Act
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    EU AI Act
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esg-sustainability-assistant-eu-ai-act-application-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESG Sustainability Assistant - EU AI Act Application Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk classification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-and-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models and Datasets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Models and Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-and-environment-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure and Environment Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-external-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with External Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Measures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-validation-accuracy-robustness-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Validation (Accuracy, Robustness, Cybersecurity)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Validation (Accuracy, Robustness, Cybersecurity)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-throughout-the-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy throughout the lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-oversight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Oversight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-ai-application-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting AI Application Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting AI Application Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-level-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insufficient-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insufficient Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-pipeline-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Pipeline Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-format-mismatches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Mismatches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-level-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model-Level Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-and-security-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety and Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unauthorised-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unauthorised Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-breaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Breaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-and-logging-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring and Logging Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring and Logging Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-or-incomplete-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing or Incomplete Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-and-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery and Rollback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery and Rollback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollback-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disaster Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-level-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insufficient-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insufficient Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-pipeline-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Pipeline Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-format-mismatches_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Mismatches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-problems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-level-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-or-deployment-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance or Deployment Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-and-security-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety and Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unauthorised-access_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unauthorised Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-breaches_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Breaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-and-logging-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring and Logging Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring and Logging Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-or-incomplete-logs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing or Incomplete Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-and-rollback_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery and Rollback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery and Rollback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollback-mechanisms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disaster Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eu-declaration-of-conformity" class="md-nav__link">
+    <span class="md-ellipsis">
+      EU Declaration of conformity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standards-applied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards applied
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Authors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FastAPI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.api.main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    api.main
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Flow
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Flow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    esg_sustainability_assistant.main
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Crews
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Crews
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.crews.analisi_dati.analisi_dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    analisi_dati
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.crews.compliance_advisor.compliance_advisor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    compliance_advisor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.crews.report_writer.report_writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    report_writer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.crews.sustainabilty_strategist.sustainability_strategist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sustainability_strategist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.esg_sustainability_assistant.tools.custom_tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    custom_tool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.models.company_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    company_info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.models.inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    inference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/src.models.feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esg-sustainability-assistant-eu-ai-act-application-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESG Sustainability Assistant - EU AI Act Application Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk classification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models-and-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models and Datasets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Models and Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-and-environment-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure and Environment Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-external-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with External Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Measures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-validation-accuracy-robustness-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Validation (Accuracy, Robustness, Cybersecurity)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Validation (Accuracy, Robustness, Cybersecurity)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-throughout-the-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy throughout the lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cybersecurity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-oversight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Oversight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-ai-application-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting AI Application Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting AI Application Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-level-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insufficient-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insufficient Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-pipeline-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Pipeline Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-format-mismatches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Mismatches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-level-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model-Level Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-and-security-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety and Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unauthorised-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unauthorised Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-breaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Breaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-and-logging-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring and Logging Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring and Logging Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-or-incomplete-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing or Incomplete Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-and-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery and Rollback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery and Rollback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollback-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disaster Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-level-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infrastructure-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insufficient-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insufficient Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-pipeline-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Pipeline Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-format-mismatches_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Mismatches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-problems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-level-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model-Level Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model-Level Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-or-deployment-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance or Deployment Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-and-security-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety and Security Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Security Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unauthorised-access_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unauthorised Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-breaches_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Breaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-and-logging-failures_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring and Logging Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring and Logging Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-or-incomplete-logs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing or Incomplete Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-and-rollback_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recovery and Rollback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery and Rollback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rollback-mechanisms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disaster Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eu-declaration-of-conformity" class="md-nav__link">
+    <span class="md-ellipsis">
+      EU Declaration of conformity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standards-applied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards applied
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Authors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>EU AI Act</h1>
+
+<h2 id="esg-sustainability-assistant-eu-ai-act-application-documentation">ESG Sustainability Assistant - EU AI Act Application Documentation</h2>
+<p><strong>Application Owner</strong>: Giorgio [giorgio@email.com]
+<br><strong>Document Version</strong>: v1.0.0 (2025-09-09)
+<br><strong>Reviewers</strong>: ESG Sustainability Assistant Team</p>
+<h2 id="key-links">Key Links</h2>
+<ul>
+<li><a href="https://github.com/your-org/esg-sustainability-assistant">Code Repository</a></li>
+<li><a href="docker/Dockerfile.streamlit">Deployment Pipeline</a></li>
+<li><a href="src/api/main.py">API</a></li>
+<li><a href="N/A">Cloud Account</a></li>
+<li><a href="N/A">Project Management Board</a></li>
+<li><a href="src/esg_sustainability_assistant/main.py">Application Architecture</a></li>
+</ul>
+<h2 id="general-information">General Information</h2>
+<div style="color: gray">
+EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 1, 2, 3
+<!-- info: this section covers the AI Act requirement of a description of the intended purpose, version and provider, relevant versions and updates. In Article 11, 2(d) a datasheet is required which describes all training methodologies and techniques as well as the characteristics of the training dataset, general description of the dataset, information about their provenance, scope and main characteristics, how the data was obtained and selected, labelling procedures conducted, and data cleaning methodologies deployed. -->
+<p></p>
+</div>
+
+<p><strong>Purpose and Intended Use</strong>:</p>
+<ul>
+<li>The ESG Sustainability Assistant automates the generation of ESG (Environmental, Social, Governance) reports for companies, supporting compliance, benchmarking, and strategic planning.</li>
+<li>It addresses the need for efficient, standardized ESG analysis and reporting, reducing manual effort and increasing transparency.</li>
+<li>Target users: sustainability officers, compliance teams, consultants, and company management.</li>
+<li>KPIs: report accuracy, user feedback ratings, compliance coverage, and report generation time.</li>
+<li>Ethical considerations: transparency, fairness, and avoidance of bias in ESG recommendations.</li>
+<li>Prohibited uses: not for regulatory evasion, falsification of ESG data, or use in critical safety systems.</li>
+<li><strong>Operational environment:</strong> Runs as a web application (Streamlit frontend), with a Python backend and REST API, deployable on cloud VMs or containers.</li>
+</ul>
+<h2 id="risk-classification">Risk classification</h2>
+<div style="color: gray">
+Prohibited Risk: EU AI Act Chapter II <a href="https://artificialintelligenceact.eu/article/5/" style="color:blue; text-decoration:underline">Article 5</a>
+<br>High-Risk: EU AI Act Chapter III, Section 1 <a href="https://artificialintelligenceact.eu/article/6/" style="color:blue; text-decoration:underline">Article 6</a>, <a href="https://artificialintelligenceact.eu/article/7/" style="color:blue; text-decoration:underline">Article 7</a>  
+<br>Limited Risk: Chapter IV <a href="https://artificialintelligenceact.eu/article/50/" style="color:blue; text-decoration:underline">Article 50</a>
+<p></p>
+</div>
+
+<!--info: The AI Act classifies AI systems into four different risk categories. The EU AI Act categorizes AI systems into four risk levels: unacceptable, high, limited, and minimal risk, each with corresponding regulatory requirements.
+Unacceptable risk (Chapter II, Article 5) includes systems that pose a clear threat to safety or fundamental rights (e.g. social scoring, recidivism scoring) and are banned.
+High-risk systems are delineated in Chapter III, Section 1, Articles 6 and 7, including AI used in sensitive domains like healthcare, law enforcement, education, employment, and critical infrastructure. These must meet strict requirements and conduct conformity assessment practices, including risk management, transparency, and human oversight.
+Limited-risk systems, delineated in Chapter IV Article 50, such as chatbots, must meet transparency obligations (e.g. disclosing AI use).
+Minimal-risk systems, like spam filters or AI in video games, face no specific requirements. -->
+
+<ul>
+<li>Limited Risk (in accordance with the AI Act)</li>
+<li>Reasoning: The system provides decision support and transparency tools (e.g., ESG report generation and benchmarking) but does not make autonomous decisions affecting legal rights or safety. It requires human review and approval before any action is taken.</li>
+</ul>
+<h2 id="application-functionality">Application Functionality</h2>
+<div style="color: gray">
+EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a> ; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a>, paragraph 1, 2, 3
+<!-- Info: this section covers the delineation of the general purpose of the system required in Article 1, with a focus on defining what the system should do and how it should work.-->
+<p></p>
+</div>
+
+<ul>
+<li><strong>Instructions for use for deployers</strong>: <div style="color: gray">(EU AI Act <a href="https://artificialintelligenceact.eu/article/13/" style="color:blue; text-decoration:underline">Article 13</a>)</div></li>
+<li><strong>Model Capabilities</strong>:<ul>
+<li>What the application can and cannot do (limitations).</li>
+<li>Supported languages, data types, or scenarios.</li>
+</ul>
+</li>
+<li><strong>Input Data Requirements</strong>:<ul>
+<li>Format and quality expectations for input data.</li>
+<li>Examples of valid and invalid inputs.</li>
+</ul>
+</li>
+<li><strong>Output Explanation</strong>:<ul>
+<li>How to interpret predictions, classifications, or recommendations.</li>
+<li>Uncertainty or confidence measures, if applicable.</li>
+</ul>
+</li>
+<li><strong>System Architecture Overview</strong>:<ul>
+<li>Functional description and architecture of the system.</li>
+<li>Describe the key components of the system (including datasets, algorithms, models, etc.)</li>
+</ul>
+</li>
+</ul>
+<h2 id="models-and-datasets">Models and Datasets</h2>
+<div style="color: gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 2 (d)
+<p></p>
+</div>
+
+<!--All information about models and datasets that are used in the application should be found in their respective dataset or model documentation.  The purpose here is mainly to provide links to those documentation. -->
+<!--In Article 11, 2 (d) a datasheet is required which describes all training methodologies and techniques as well as the charatcteristics of the training dataset, general description of the dataset, information about their provenance, scope and main characteristics, how the data was obtained and selected labelling procedures conducted and data cleaning methodologies deployed -->
+
+<h3 id="models">Models</h3>
+<p>No proprietary or custom ML models are directly integrated; the system orchestrates analysis using rule-based and workflow logic, leveraging external APIs and libraries for NLP and benchmarking where needed.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Link to Single Source of Truth</th>
+<th>Description of Application Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model 1</td>
+<td><a href="">TechOps Model Document</a></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Model 2</td>
+<td><a href="">TechOps Model Document</a></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Model 3</td>
+<td><a href="">GitHub Repo</a></td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datasets">Datasets</h3>
+<p>Link to all dataset documentation and information used to evaluate the AI/ML System.<br />
+(Note, Model Documentation should also contain dataset information and links for all datasets used to train and test each respective model)</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Link to Single Source of Truth</th>
+<th>Description of Application Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>No proprietary datasets; uses user-provided company info and public ESG benchmarks.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deployment">Deployment</h2>
+<ul>
+<li>Infrastructure and environment details (e.g., cloud setup, APIs).</li>
+<li>Integration with external systems or applications.</li>
+</ul>
+<h3 id="infrastructure-and-environment-details">Infrastructure and Environment Details</h3>
+<ul>
+<li><strong>Cloud Setup</strong>:<ul>
+<li>Specify cloud provider (e.g., AWS, Azure, GCP) and regions.</li>
+<li>List required services: compute (e.g., EC2, Kubernetes), storage (e.g., S3, Blob Storage), and databases (e.g., DynamoDB, Firestore).</li>
+<li>Define resource configurations (e.g., VM sizes, GPU/TPU requirements).</li>
+<li>Network setup: VPC, subnets, and security groups.</li>
+</ul>
+</li>
+<li><strong>APIs</strong>:<ul>
+<li>API endpoints, payload structure, authentication methods (e.g., OAuth, API keys).</li>
+<li>Latency and scalability expectations.</li>
+</ul>
+</li>
+</ul>
+<h2 id="integration-with-external-systems">Integration with External Systems</h2>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a> ; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 1 (b, c, d, g, h), 2 (a)
+  <p></p>
+</div>
+
+<ul>
+<li><strong>Systems</strong>:<ul>
+<li>Dependencies: Python 3.10+, Streamlit, FastAPI, MLflow, Pydantic, requests, crewai.</li>
+<li>Data flow: User → Streamlit frontend → API backend → ESG analysis flow → report output.</li>
+<li>Error-handling: API returns error messages for invalid input or backend failures; frontend displays user-friendly errors.</li>
+</ul>
+</li>
+</ul>
+<h2 id="deployment-plan">Deployment Plan</h2>
+<ul>
+<li><strong>Infrastructure</strong>:<ul>
+<li>Environments: development, staging, production (via Docker Compose or cloud VM).</li>
+<li>Scaling: stateless, can be horizontally scaled; no persistent state.</li>
+<li>Backup/recovery: not required (stateless); logs and reports can be exported.</li>
+</ul>
+</li>
+<li><strong>Integration Steps</strong>:<ul>
+<li>Deploy backend API, then frontend. No database migrations or model uploads required.</li>
+<li>Dependencies: see requirements.txt/pyproject.toml.</li>
+<li>Rollback: redeploy previous container/image.</li>
+</ul>
+</li>
+<li><strong>User Information</strong>: where is this under deployment?</li>
+</ul>
+<h2 id="lifecycle-management">Lifecycle Management</h2>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 6
+  <p></p>
+</div>
+
+<ul>
+<li>Monitoring: MLflow tracks all analysis runs, parameters, and outputs.</li>
+<li>Versioning: Codebase is version-controlled (Git); no model versioning required.</li>
+<li><strong>Metrics</strong>:</li>
+<li>Application: response time, error rate, user feedback ratings.</li>
+<li>Infrastructure: CPU/memory usage (via cloud monitoring if deployed).</li>
+<li><strong>Key Activities</strong>:</li>
+<li>Monitor API and frontend logs.</li>
+<li>Address user feedback and bug reports.</li>
+<li>Update codebase as needed.</li>
+<li><strong>Documentation Needs</strong>:</li>
+<li>MLflow logs, API logs, and user feedback records.</li>
+<li>Change log maintained in version control.</li>
+<li>Change log includes: new features, updates, deprecated/removed features, bug/security fixes.</li>
+</ul>
+<h3 id="risk-management-system">Risk Management System</h3>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/9/" style="color:blue; text-decoration:underline">Article 9</a>
+  <br>EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>
+  ; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a>
+  <p></p>
+</div>
+<!--**Instructions:**  A thorough risk management system is mandated by the AI Act, especially for high-risk AI systems. This section documents the  proactive efforts to ensure the AI system operates safely and ethically. In general in this section you should document all the measures undertaken to make sure that a system operates safely on the market. Example: Consider a facial recognition system used for real-time law enforcement in public spaces. This is categorized as high-risk under the EU AI Act. If developers document the risk that the system might misidentify individuals—particularly among minority groups due to biased training data—they can plan for rigorous dataset audits, independent bias testing, and establish human oversight in decision-making. Without documenting this risk, the system might be deployed without safeguards, leading to wrongful detentions and legal liabilities. Systematic documentation ensures these issues are not only identified but addressed before harm occurs.-->
+
+<p><strong>Risk Assessment Methodology:</strong> Risks are identified and assessed using ISO 31000 principles and regular code review. MLflow is used to trace all analysis steps for auditability.</p>
+<p><strong>Identified Risks:</strong></p>
+<ul>
+<li>Biased or incomplete ESG recommendations due to limited input data.</li>
+<li>Privacy risks if sensitive company data is entered.</li>
+<li>System downtime or API errors affecting report availability.</li>
+</ul>
+<p><strong>Potential Harmful Outcomes:</strong></p>
+<ul>
+<li>Inaccurate ESG reports leading to poor business decisions.</li>
+<li>Exposure of confidential company information.</li>
+<li>Misinterpretation of recommendations without human oversight.</li>
+</ul>
+<p><strong>Likelihood and Severity:</strong></p>
+<ul>
+<li>Likelihood: Low to moderate (requires user input and review).</li>
+<li>Severity: Moderate (impacts business decisions, not safety-critical).</li>
+</ul>
+<h4 id="risk-mitigation-measures">Risk Mitigation Measures</h4>
+<p><strong>Preventive Measures:</strong> Input validation, user review of all outputs, transparency in report generation, and regular code audits.</p>
+<p><strong>Protective Measures:</strong> API error handling, user feedback loop, and ability to update/patch the system rapidly.</p>
+<h2 id="testing-and-validation-accuracy-robustness-cybersecurity">Testing and Validation (Accuracy, Robustness, Cybersecurity)</h2>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/15/" style="color:blue; text-decoration:underline">Article 15</a>
+  <p></p>
+</div>
+
+<p><strong>Testing and Validation Procedures (Accuracy):</strong></p>
+<ul>
+<li>Unit and integration tests for API and workflow logic.</li>
+<li>Manual validation of generated reports.</li>
+<li>User feedback is collected and reviewed for continuous improvement.</li>
+</ul>
+<p><strong>Performance Metrics:</strong> User feedback ratings, report generation time, API error rate.</p>
+<p><strong>Validation Results:</strong> Reports are validated against known ESG benchmarks and expert review; user feedback is monitored for quality.</p>
+<p><strong>Measures for Accuracy:</strong> Input validation, workflow traceability (MLflow), and user review.</p>
+<h3 id="accuracy-throughout-the-lifecycle">Accuracy throughout the lifecycle</h3>
+<p><strong>Data Quality and Management:</strong> All input data is user-provided and validated for completeness and correctness.</p>
+<p><strong>Model Selection and Optimisation:</strong> No ML model selection; workflow logic is modular and can be updated as needed.</p>
+<p><strong>Feedback Mechanisms:</strong> User feedback is collected via the frontend and API for continuous improvement.</p>
+<h3 id="robustness">Robustness</h3>
+<p>&lt;-- Add outlier detection and all possible post analysis, what are the criticalities --&gt;</p>
+<p><strong>Robustness Measures:</strong></p>
+<ul>
+<li>Error handling, modular workflow, and user review ensure robustness.</li>
+</ul>
+<p><strong>Scenario-Based Testing:</strong></p>
+<ul>
+<li>Handles invalid input gracefully; errors are surfaced to the user.</li>
+</ul>
+<p><strong>Redundancy and Fail-Safes:</strong></p>
+<ul>
+<li>System is stateless; can be restarted or redeployed without data loss.</li>
+</ul>
+<p><strong>Uncertainty Estimation:</strong></p>
+<ul>
+<li>No explicit uncertainty quantification; user review is required for all outputs.</li>
+</ul>
+<h3 id="cybersecurity">Cybersecurity</h3>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 2 (h)
+  <p></p>
+</div>
+
+<p><strong>Data Security:</strong></p>
+<ul>
+<li>No sensitive data stored; all processing is in-memory.</li>
+<li>Recommend deploying behind secure HTTPS endpoints.</li>
+</ul>
+<p><strong>Access Control:</strong></p>
+<ul>
+<li>No authentication by default; recommend API gateway or reverse proxy for production.</li>
+</ul>
+<p><strong>Incident Response :</strong></p>
+<ul>
+<li>Monitor logs for errors; patch and redeploy as needed.</li>
+</ul>
+<p>These measures include threat modelling, data security, adversarial robustness, secure development practices, access control, and incident response mechanisms.</p>
+<p>Post-deployment monitoring, patch management, and forensic logging are crucial to maintaining ongoing cybersecurity compliance.</p>
+<p>Documentation of all cybersecurity processes and incidents is mandatory to ensure accountability and regulatory conformity.</p>
+<h2 id="human-oversight">Human Oversight</h2>
+<div style="color:gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/11/" style="color:blue; text-decoration:underline">Article 11</a>;; <a href="https://artificialintelligenceact.eu/annex/4/" style="color:blue; text-decoration:underline">Annex IV</a> paragraph 2(e)
+  <br>EU AI Act <a href="https://artificialintelligenceact.eu/article/14/" style="color:blue; text-decoration:underline">Article 14</a>
+  <p></p>
+</div>
+
+<!-- info: AI Act Article 11, paragraph 2(e) requirements: assessment of the human oversight measures needed in accordance with Article 14, including the assessment of the technical measures needed to facilitate the integration of the outputs of the AI systems by deployers. -->
+
+<p><strong>Human-in-the-Loop Mechanisms:</strong> All ESG reports require human review and approval before use in decision-making.</p>
+<p><strong>Override and Intervention Procedures:</strong> Users can disregard or override any report output; system can be stopped or redeployed at any time.</p>
+<p><strong>User Instructions and Training:</strong> User guide provided in documentation; intuitive Streamlit interface for input and feedback.</p>
+<p><strong>Limitations and Constraints of the System:</strong> Cannot guarantee regulatory compliance or replace expert judgment; limited by input data quality.</p>
+<h2 id="incident-management">Incident Management</h2>
+<!-- what happens when things go wrong. This part is particularly important to provide information on how incidents were dealth with and the processes put in place to minimize damage when things go wrong. -->
+
+<ul>
+<li><strong>Common Issues</strong>:<ul>
+<li>Invalid input data (missing fields, wrong types): Ensure all required fields are present and correctly formatted in API requests.</li>
+<li>API errors or timeouts: Check backend logs for stack traces and error messages; verify that all services are running.</li>
+</ul>
+</li>
+<li><strong>Support Contact</strong>:<ul>
+<li>Technical support: Giorgio Caddeo (giorgio@email.com)</li>
+<li>Community: <a href="https://github.com/your-org/esg-sustainability-assistant/issues">GitHub Issues</a></li>
+<li>How to reach technical support or community forums.</li>
+</ul>
+</li>
+</ul>
+<h3 id="troubleshooting-ai-application-deployment">Troubleshooting AI Application Deployment</h3>
+<p>This section outlines potential issues during deployment and their mitigation strategies for the ESG Sustainability Assistant.</p>
+<h4 id="infrastructure-level-issues">Infrastructure-Level Issues</h4>
+<h5 id="insufficient-resources">Insufficient Resources</h5>
+<ul>
+<li><strong>Problem</strong>: Application crashes or slow performance due to insufficient CPU/memory.</li>
+<li><strong>Mitigation</strong>: Monitor resource usage; scale containers/VMs as needed; use cloud auto-scaling if available.</li>
+</ul>
+<h5 id="network-failures">Network Failures</h5>
+<ul>
+<li><strong>Problem</strong>: Frontend cannot reach backend API or external services.</li>
+<li><strong>Mitigation</strong>: Check network/firewall settings; ensure correct API URLs; use health checks and retry logic.</li>
+</ul>
+<h5 id="deployment-pipeline-failures">Deployment Pipeline Failures</h5>
+<ul>
+<li><strong>Problem</strong>: Build or deployment fails due to misconfiguration or missing dependencies.</li>
+<li><strong>Mitigation</strong>: Validate Docker and environment configs; use CI/CD with clear error logs; roll back to last working version.</li>
+</ul>
+<h4 id="integration-problems">Integration Problems</h4>
+<h5 id="api-failures">API Failures</h5>
+<ul>
+<li><strong>Problem</strong>: API endpoints return errors or are unreachable.</li>
+<li><strong>Mitigation</strong>: Check backend logs; validate input data; ensure backend is running and accessible.</li>
+</ul>
+<h5 id="data-format-mismatches">Data Format Mismatches</h5>
+<ul>
+<li><strong>Problem</strong>: Errors due to unexpected or invalid input data.</li>
+<li><strong>Mitigation</strong>: Validate input against API schema; use example payloads from documentation.</li>
+</ul>
+<h4 id="data-quality-problems">Data Quality Problems</h4>
+<ul>
+<li><strong>Problem</strong>: Poor or incomplete input data leads to low-quality reports.</li>
+<li><strong>Mitigation</strong>: Require all mandatory fields; validate data before submission.</li>
+</ul>
+<h4 id="model-level-issues">Model-Level Issues</h4>
+<ul>
+<li><strong>Not applicable</strong>: No proprietary ML models are deployed in this project.</li>
+</ul>
+<h4 id="safety-and-security-issues">Safety and Security Issues</h4>
+<h5 id="unauthorised-access">Unauthorised Access</h5>
+<ul>
+<li><strong>Problem</strong>: API exposed without authentication.</li>
+<li><strong>Mitigation</strong>: Deploy behind API gateway or reverse proxy; use HTTPS.</li>
+</ul>
+<h5 id="data-breaches">Data Breaches</h5>
+<ul>
+<li><strong>Problem</strong>: Sensitive data exposure.</li>
+<li><strong>Mitigation</strong>: Do not store sensitive data; process all data in-memory; restrict access to deployment.</li>
+</ul>
+<h4 id="monitoring-and-logging-failures">Monitoring and Logging Failures</h4>
+<h5 id="missing-or-incomplete-logs">Missing or Incomplete Logs</h5>
+<ul>
+<li><strong>Problem</strong>: Lack of logs for debugging.</li>
+<li><strong>Mitigation</strong>: Ensure logging is enabled for all services; use MLflow and container logs.</li>
+</ul>
+<h4 id="recovery-and-rollback">Recovery and Rollback</h4>
+<h5 id="rollback-mechanisms">Rollback Mechanisms</h5>
+<ul>
+<li><strong>Problem</strong>: New deployment introduces errors.</li>
+<li><strong>Mitigation</strong>: Use versioned Docker images; roll back to previous version if needed.</li>
+</ul>
+<h5 id="disaster-recovery">Disaster Recovery</h5>
+<ul>
+<li><strong>Problem</strong>: Complete system outage.</li>
+<li><strong>Mitigation</strong>: Redeploy containers/VMs from source; no persistent data to restore.</li>
+</ul>
+<p>This section outlines potential issues that can arise during the deployment of an AI application, along with their causes, resolutions, and best practices for mitigation.</p>
+<h4 id="infrastructure-level-issues_1">Infrastructure-Level Issues</h4>
+<h5 id="insufficient-resources_1">Insufficient Resources</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: Inaccurate resource estimation for production workloads.</p>
+<ul>
+<li>Unexpected spikes in user traffic can lead to insufficient resources such as compute, memory or storage that can lead to crashes and bad performance</li>
+</ul>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!-- describe here the resolution strategy such as:
+
+*   Enable autoscaling (e.g., Kubernetes Horizontal Pod Autoscaler).
+*   Monitor usage metrics and adjust resource allocation dynamically.
+*   Implement rate-limiting for traffic spikes. -->
+
+<h5 id="network-failures_1">Network Failures</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: network bottlenecks can lead to inaccessible or experiences latency of the application.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+-   Test network connectivity
+-   Use content delivery networks (CDNs) or regional load balancers.
+-   Ensure proper failover mechanisms.-->
+
+<h5 id="deployment-pipeline-failures_1">Deployment Pipeline Failures</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: pipeline fails to build, test, or deploy because of issues of compatibility between application code and infrastructure, environment variables or credentials misconfiguration.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--:
+-   Roll back to the last stable build.
+-   Fix pipeline scripts and use containerisation for environment consistency.
+-   Enable verbose logging for error diagnostics.-->
+
+<h4 id="integration-problems_1">Integration Problems</h4>
+<h5 id="api-failures_1">API Failures</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: External APIs or internal services are unreachable due to network errors or authentication failures.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--:
+-   Implement retries with exponential backoff.
+-   Validate API keys or tokens and refresh as needed.
+-   Log and monitor API responses for debugging. -->
+
+<h5 id="data-format-mismatches_1">Data Format Mismatches</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: Crashes or errors due to unexpected data formats such as changes in the schema of external data sources or missing data validation steps.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+  - Use schema validation tools (e.g., JSON schema validators).
+  - Add versioning to APIs and validate inputs before processing.-->
+
+<h4 id="data-quality-problems_1">Data Quality Problems</h4>
+<ul>
+<li><strong>Problem</strong>: Inaccurate or corrupt data leads to poor predictions.</li>
+<li>
+<p><strong>Causes</strong>:</p>
+<ul>
+<li>No data validation or cleaning processes.</li>
+<li>Inconsistent labelling in training datasets.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+
+*   **Resolution**:
+    -   Automate data quality checks (e.g., Great Expectations framework).
+    -   Regularly audit and clean production data.-->
+
+<h4 id="model-level-issues_1">Model-Level Issues</h4>
+<h5 id="performance-or-deployment-issues">Performance or Deployment Issues</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: Incorrect or inconsistent results due to data drift or inadequate training data for the real world deployment domain.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+- **Resolution**:
+  - Monitoring for data drift and retraining of the model as needed.
+  - Regularly update the model -->
+
+<h4 id="safety-and-security-issues_1">Safety and Security Issues</h4>
+<h5 id="unauthorised-access_1">Unauthorised Access</h5>
+<ul>
+<li><strong>Problem</strong>: Sensitive data or APIs are exposed due to misconfigured authentication and authorization.</li>
+</ul>
+<h5 id="data-breaches_1">Data Breaches</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: User or model data is compromised due to insecure storage or lack of monitoring and logging of data access.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+
+*   **Resolution**:
+    -   Use secure storage services (e.g., AWS KMS).
+    -   Implement auditing for data access and alerts for unusual activity.
+        6.1. Delayed or Missing Data-->
+
+<h4 id="monitoring-and-logging-failures_1">Monitoring and Logging Failures</h4>
+<h5 id="missing-or-incomplete-logs_1">Missing or Incomplete Logs</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: Lack of information to debug issues due to inefficient logging. Critical issues go unnoticed, or too many false positives occur by lack of implementation ofactionable information in alerts.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+- **Resolution**:
+  - Fine-tune alerting thresholds and prioritise critical alerts.
+  - Use tools like Prometheus Alertmanager to manage and group alerts. -->
+
+<h4 id="recovery-and-rollback_1">Recovery and Rollback</h4>
+<h5 id="rollback-mechanisms_1">Rollback Mechanisms</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: New deployment introduces critical errors.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+- **Resolution**:
+  - Use blue-green or canary deployments to minimise impact.
+  - Maintain backups of previous versions and configurations. -->
+
+<h5 id="disaster-recovery_1">Disaster Recovery</h5>
+<ul>
+<li>
+<p><strong>Problem</strong>: Complete system outage or data loss.</p>
+</li>
+<li>
+<p><strong>Mitigation Strategy</strong>:</p>
+</li>
+</ul>
+<!--
+- **Resolution**:
+  - Test and document disaster recovery plans.
+  - Use automated backups and verify restore procedures.-->
+
+<h3 id="eu-declaration-of-conformity">EU Declaration of conformity</h3>
+<p>Not applicable. The ESG Sustainability Assistant is not certified under EU conformity assessment procedures and does not process personal data requiring such declaration. If certification is pursued in the future, this section will be updated accordingly.</p>
+<div style="color: gray">
+  EU AI Act <a href="https://artificialintelligenceact.eu/article/47/" style="color:blue; text-decoration:underline">Article 47</a>
+  <p></p>
+</div>
+
+<!-- when applicable and certifications are available: it requires a systems name as well as the name and address of the provider; a statement that the EU declaration of conformity referred to in Article 47 is issued under the sole responsibility of the provider; a statement that the AI system is in conformity with this Regulation and, if applicable, with any other relevant Union law that provides for the issuing of the EU declaration of conformity referred to in Article 47, Where an AI system involves the processing of personal data;  a statement that that AI system complies with Regulations (EU) 2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, reference to the harmonised standards used or any other common specification in relation to which
+conformity is declared; the name and identification number of the notified body, a description of the conformity
+assessment procedure performed, and identification of the certificate issued; the place and date of issue of the declaration, the name and function of the person who signed it, as well as an
+indication for, or on behalf of whom, that person signed, a signature.-->
+
+<h3 id="standards-applied">Standards applied</h3>
+<ul>
+<li>ISO 31000 (Risk Management Principles, for risk assessment methodology)</li>
+<li>Pydantic (data validation)</li>
+<li>MLflow (experiment tracking and traceability)</li>
+<li>Docker (containerization best practices)</li>
+<li>EU AI Act (regulatory alignment)</li>
+</ul>
+<!-- Document here the standards and frameworks used-->
+
+<h2 id="documentation-metadata">Documentation Metadata</h2>
+<h3 id="template-version">Template Version</h3>
+<ul>
+<li>Based on <a href="https://github.com/your-org/eu-ai-act-template">EU AI Act Model Documentation Template</a> v1.0.0</li>
+</ul>
+<!-- info: link to model documentation template (i.e. could be a GitHub link) -->
+
+<h3 id="documentation-authors">Documentation Authors</h3>
+<ul>
+<li>Giorgio, ESG Sustainability Assistant Team: Contributor</li>
+</ul>
+<!-- info: Give documentation authors credit
+
+Select one or more roles per author and reference author's
+emails to ease communication and add transparency. -->
+
+<ul>
+<li><strong>Nicolò Resta, ESG Sustainability Assistant Team:</strong> (Owner)</li>
+<li><strong>Cherki Meziane, ESG Sustainability Assistant Team:</strong> (Contributor)</li>
+<li><strong>Giorgio Caddeo, ESG Sustainability Assistant Team:</strong> (Contributor)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
