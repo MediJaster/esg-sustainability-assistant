@@ -1,0 +1,67 @@
+environmental_initiatives_design_task:
+  description: >
+    Design 2-3 key Environmental initiatives for {azienda_nome}.
+    Focus: carbon reduction, resource efficiency, waste management.
+    Prioritize quick wins with measurable impact.
+    
+  expected_output: >
+    Environmental initiatives:
+    - 2-3 concrete initiatives with implementation approach
+    - SMART objectives and 12-month timeline
+    - Resource needs (budget estimate, FTE)
+    - Expected benefits (emissions reduction, cost savings)
+    Format: Initiative cards + implementation timeline
+  agent: environmental_strategy_designer
+
+social_impact_programs_task:
+  description: >
+    Develop 2 Social initiatives for {azienda_nome}.
+    Areas: employee wellbeing, community engagement, supply chain responsibility.
+    Focus on business value + social impact.
+    
+  expected_output: >
+    Social programs:
+    - 2 initiatives with clear business case
+    - Target beneficiaries and implementation method
+    - Social + business metrics
+    - Timeline and budget estimate
+    Format: Program overview + business case
+  agent: social_impact_strategist
+
+governance_framework_design_task:
+  description: >
+    Design basic ESG governance structure for {azienda_nome}.
+    Define: committee structure, reporting lines, decision processes.
+    Keep it simple and scalable.
+    
+  expected_output: >
+    Governance framework:
+    - ESG committee structure and roles
+    - Key decision-making processes
+    - Reporting frequency and format
+    - Performance monitoring approach
+    Format: Org chart + process overview
+  agent: governance_excellence_advisor
+
+integrated_strategic_action_plan_task:
+  description: >
+    Combine all ESG initiatives into prioritized 18-month action plan for {azienda_nome}.
+    Integrate Environmental, Social, Governance with timeline and resources.
+    Focus on implementation priorities and quick wins.
+    
+  context:
+    - environmental_initiatives_design_task
+    - social_impact_programs_task
+    - governance_framework_design_task
+  expected_output: >
+    Strategic ESG action plan:
+    - Executive summary with top priorities
+    - Phase 1 (0-6m): Quick wins and governance setup
+    - Phase 2 (6-18m): Strategic initiatives implementation
+    - Total resource needs and budget estimate
+    - Top 5 success metrics
+    - Key implementation risks
+    Format: Action plan + timeline + resource summary
+    The final output should be structured with a first level
+    section and then with subsections as needed.
+  agent: strategic_prioritization_expert
