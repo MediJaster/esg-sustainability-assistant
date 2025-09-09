@@ -920,6 +920,7 @@ docs = [
 streamlit = [
     { name = "pydantic" },
     { name = "requests" },
+    { name = "st-star-rating" },
     { name = "streamlit" },
 ]
 
@@ -940,6 +941,7 @@ docs = [
 streamlit = [
     { name = "pydantic", specifier = ">=2.11.7" },
     { name = "requests", specifier = ">=2.32.5" },
+    { name = "st-star-rating", specifier = ">=0.0.6" },
     { name = "streamlit", specifier = ">=1.49.1" },
 ]
 
@@ -4292,6 +4294,17 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/42/6f/22ed6e33f8a9e76ca0a412405f31abb844b779d52c5f96660766edcd737c/sse_starlette-3.0.2.tar.gz", hash = "sha256:ccd60b5765ebb3584d0de2d7a6e4f745672581de4f5005ab31c3a25d10b52b3a", size = 20985, upload-time = "2025-07-27T09:07:44.565Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ef/10/c78f463b4ef22eef8491f218f692be838282cd65480f6e423d7730dfd1fb/sse_starlette-3.0.2-py3-none-any.whl", hash = "sha256:16b7cbfddbcd4eaca11f7b586f3b8a080f1afe952c15813455b162edea619e5a", size = 11297, upload-time = "2025-07-27T09:07:43.268Z" },
+]
+
+[[package]]
+name = "st-star-rating"
+version = "0.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "streamlit" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/08/0202a7f9383f32ddc55f1b1acd62a30998cd5fb7349bc44d2c8cb53b7038/st_star_rating-0.0.6-py3-none-any.whl", hash = "sha256:238e31d531df34a8e15eebb348cbed953c9c1689889233457c8e67846b073d79", size = 1164052, upload-time = "2023-10-16T15:08:52.786Z" },
 ]
 
 [[package]]

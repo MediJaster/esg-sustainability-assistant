@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY pyproject.toml uv.lock /app/
 
-RUN pip install pydantic requests streamlit
+RUN pip install pydantic requests streamlit st-star-rating
 
 COPY ./src/streamlit_app.py ./src/models/ /app/src/
 
