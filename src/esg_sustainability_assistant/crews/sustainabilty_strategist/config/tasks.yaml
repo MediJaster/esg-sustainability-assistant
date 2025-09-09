@@ -1,144 +1,65 @@
 environmental_initiatives_design_task:
   description: >
-    Progetta 3-4 iniziative Environmental concrete per l'azienda {azienda_nome} 
-    basandoti sul benchmark analysis e sui requisiti compliance identificati.
+    Design 2-3 key Environmental initiatives for {azienda_nome}.
+    Focus: carbon reduction, resource efficiency, waste management.
+    Prioritize quick wins with measurable impact.
     
-    Aree di focus Environmental:
-    1. Carbon footprint reduction (Scope 1, 2, 3)
-    2. Resource efficiency (energia, acqua, materie prime)
-    3. Waste management e circular economy
-    4. Sustainable supply chain e procurement
-    5. Green innovation e R&D sostenibile
-    
-    Per ogni iniziativa specifica: obiettivo, approccio, risorse, timeline, benefici attesi.
-    Prioritizza iniziative con quick wins e impatto misurabile.
   expected_output: >
-    Piano iniziative Environmental contenente:
-    - 3-4 iniziative concrete con dettaglio implementativo completo
-    - Per ogni iniziativa: obiettivo SMART, metodologia, risorse necessarie (FTE, budget), timeline 12-24 mesi
-    - Benefici attesi: riduzione emissioni/costi, compliance alignment, competitive advantage
-    - Quick wins identificati (0-6 mesi) vs progetti strategici (6-24 mesi)
-    - Tecnologie/partner potenziali per implementazione
-    - Risk assessment e mitigation strategies
-    - Alignment con framework compliance identificati
-    Formato: schede iniziativa dettagliate + roadmap implementazione
+    Environmental initiatives:
+    - 2-3 concrete initiatives with implementation approach
+    - SMART objectives and 12-month timeline
+    - Resource needs (budget estimate, FTE)
+    - Expected benefits (emissions reduction, cost savings)
+    Format: Initiative cards + implementation timeline
   agent: environmental_strategy_designer
 
 social_impact_programs_task:
   description: >
-    Sviluppa 2-3 iniziative Social innovative per l'azienda {azienda_nome} 
-    che creino valore condiviso per business e stakeholder.
+    Develop 2 Social initiatives for {azienda_nome}.
+    Areas: employee wellbeing, community engagement, supply chain responsibility.
+    Focus on business value + social impact.
     
-    Aree Social da considerare:
-    1. Employee wellbeing e diversity & inclusion
-    2. Community engagement e local development
-    3. Human rights e supply chain responsibility
-    4. Customer/product responsibility e safety
-    5. Skills development e future of work
-    
-    Focus su iniziative che generano business value misurabile oltre a social impact.
-    Considera specifiche del settore e stakeholder priority emersi dal benchmark.
   expected_output: >
-    Programma iniziative Social con:
-    - 2-3 iniziative Social innovative con business case chiaro
-    - Per ogni iniziativa: target beneficiari, metodologia implementazione, partner potenziali
-    - Shared value proposition: benefici per business + benefici per stakeholder
-    - Metriche social impact + business metrics (engagement, retention, brand value)
-    - Timeline implementazione con milestone di impact measurement
-    - Scalability assessment: come espandere iniziative di successo
-    - Stakeholder engagement plan per ogni iniziativa
-    - Budget requirements e potential funding sources (CSR, grants, partnerships)
-    Formato: business case social impact + implementation playbook
+    Social programs:
+    - 2 initiatives with clear business case
+    - Target beneficiaries and implementation method
+    - Social + business metrics
+    - Timeline and budget estimate
+    Format: Program overview + business case
   agent: social_impact_strategist
 
 governance_framework_design_task:
   description: >
-    Progetta struttura e processi di Governance ESG per l'azienda {azienda_nome} 
-    che supportino implementazione efficace delle iniziative e compliance management.
+    Design basic ESG governance structure for {azienda_nome}.
+    Define: committee structure, reporting lines, decision processes.
+    Keep it simple and scalable.
     
-    Elementi Governance da definire:
-    1. ESG committee structure e composition
-    2. Reporting lines e decision-making processes
-    3. Risk management e oversight mechanisms
-    4. Stakeholder engagement governance
-    5. Performance monitoring e accountability systems
-    
-    Design governance scalabile che possa evolvere con maturità ESG aziendale.
-    Considera size aziendale stimata e complexity del settore.
   expected_output: >
-    Framework Governance ESG completo con:
-    - Organizational design: comitati, ruoli, responsabilità per ESG management
-    - Decision-making framework: chi decide cosa, quando, con quali criteri
-    - Reporting architecture: frequency, format, audience per ESG reporting
-    - Risk governance: come identificare, valutare, mitigare rischi ESG
-    - Stakeholder governance: processi per engagement sistematico
-    - Performance governance: KPI setting, monitoring, corrective actions
-    - Change management approach per implementare nuova governance
-    - Governance maturity roadmap: come evolvere governance nel tempo
-    Formato: organizational chart + process flowcharts + governance manual
+    Governance framework:
+    - ESG committee structure and roles
+    - Key decision-making processes
+    - Reporting frequency and format
+    - Performance monitoring approach
+    Format: Org chart + process overview
   agent: governance_excellence_advisor
-
-roi_impact_quantification_task:
-  description: >
-    Quantifica ROI e impatto per tutte le iniziative ESG proposte, 
-    sviluppando business case e metriche di misurazione.
-    
-    Analisi da condurre:
-    1. Cost-benefit analysis per ogni iniziativa
-    2. ROI calculations (financial + non-financial benefits)
-    3. Impact metrics definition (KPI ESG + business KPI)
-    4. Payback period e break-even analysis
-    5. Risk-adjusted returns e sensitivity analysis
-    
-    Crea business case convincenti che parlino il linguaggio del CFO.
-    Include both hard metrics (savings, revenue) e soft benefits (reputation, risk mitigation).
-  expected_output: >
-    Analisi ROI e Impact contenente:
-    - Business case finanziario per ogni iniziativa con ROI calculation
-    - Costo totale per area ESG (E, S, G) con breakdown per year
-    - Revenue/savings potential quantificati quando possibile
-    - Soft benefits valuation (brand value, risk mitigation, talent retention)
-    - Metriche ESG + Business KPI per ogni iniziativa
-    - Dashboard design per monitoring ongoing ROI e impact
-    - Sensitivity analysis: best/worst case scenarios
-    - Benchmark ROI vs industry standards quando disponibili
-    - Investment prioritization matrix: ROI vs implementation complexity
-    Formato: financial model + KPI dashboard + investment recommendation
-  context:
-    - environmental_initiatives_design_task
-    - social_impact_programs_task
-  agent: roi_impact_analyst
 
 integrated_strategic_action_plan_task:
   description: >
-    Integra tutte le iniziative ESG (Environmental, Social, Governance) in un piano 
-    d'azione strategico prioritizzato e implementabile per l'azienda {azienda_nome}.
+    Combine all ESG initiatives into prioritized 18-month action plan for {azienda_nome}.
+    Integrate Environmental, Social, Governance with timeline and resources.
+    Focus on implementation priorities and quick wins.
     
-    Obiettivi di integrazione:
-    1. Prioritizzazione iniziative basata su impact, ROI, e strategic fit
-    2. Resource allocation ottimale across iniziative multiple
-    3. Timeline integration con interdependencies management
-    4. Change management approach per implementazione olistica
-    5. Success metrics e monitoring framework integrato
-    
-    Non proporre nuove iniziative, ma ottimizza e prioritizza quelle ricevute.
-    Crea roadmap implementabile che bilanci quick wins e strategic investments.
   context:
-      - environmental_initiatives_design_task
-      - social_impact_programs_task
-      - governance_framework_design_task
-      - roi_impact_quantification_task
+    - environmental_initiatives_design_task
+    - social_impact_programs_task
+    - governance_framework_design_task
   expected_output: >
-    Piano d'Azione Strategico ESG integrato contenente:
-    - Executive Summary: vision ESG e strategic priorities per 24 mesi
-    - Prioritization Matrix: tutte le iniziative ranked per impact/effort/ROI
-    - Integrated Timeline: roadmap 24 mesi con wave di implementazione
-    - Resource Plan: budget totale, FTE allocation, external support needed
-    - Governance & Organization: chi fa cosa, quando, con quali accountabilities
-    - Success Framework: KPI integrati, monitoring cadence, review processes
-    - Risk Management: principali risks e mitigation per piano complessivo
-    - Change Management Strategy: come gestire organizational change
-    - Quick Wins Plan: primi 6 mesi con deliverable concreti
-    - Strategic Investment Plan: iniziative 6-24 mesi con business case
-    Formato: strategic plan document + implementation playbook + success dashboard
+    Strategic ESG action plan:
+    - Executive summary with top priorities
+    - Phase 1 (0-6m): Quick wins and governance setup
+    - Phase 2 (6-18m): Strategic initiatives implementation
+    - Total resource needs and budget estimate
+    - Top 5 success metrics
+    - Key implementation risks
+    Format: Action plan + timeline + resource summary
   agent: strategic_prioritization_expert

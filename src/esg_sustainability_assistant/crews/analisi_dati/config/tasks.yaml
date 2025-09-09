@@ -1,126 +1,94 @@
 sector_challenges_research_task:
   description: >
-    Conduci una ricerca approfondita per identificare le 3-5 sfide ESG più critiche 
-    e specifiche del settore {settore}.
+    Identify the top 1 critical ESG challenges specific to {settore}.
     
-    Focus specifici della ricerca:
-    1. Analizzare report di settore degli ultimi 2 anni da fonti autorevoli (McKinsey, BCG, Deloitte, PWC)
-    2. Identificare le principali problematiche ambientali specifiche del settore
-    3. Mappare le sfide sociali più rilevanti (condizioni di lavoro, diversità, comunità locali)
-    4. Evidenziare i rischi di governance tipici del settore
-    5. Analizzare l'impatto delle normative emergenti sul settore
+    Research focus:
+    1. Review recent industry reports (McKinsey, BCG, Deloitte) from last year
+    2. Find sector-specific environmental issues
+    3. Identify key social challenges (labor, diversity)
+    4. Note governance risks typical to the sector
     
-    Prioritizza informazioni recenti e da fonti primarie autorevoli.
+    Use authoritative sources only.
   expected_output: >
-    Un documento strutturato che contiene:
-    - Lista delle 3-5 sfide ESG più critiche del settore con spiegazione dettagliata del perché sono prioritarie
-    - Per ogni sfida: descrizione del problema, impatto potenziale, urgenza temporale
-    - Analisi dell'evoluzione delle sfide negli ultimi 2 anni
-    - Identificazione di nuovi risk factor emergenti specifici del settore
-    - Fonti utilizzate con valutazione della loro affidabilità
-    Formato: report strutturato con sezioni per tipologia di sfida (E, S, G)
+    Structured report with:
+    - 3 critical ESG challenges with brief explanations
+    - Impact and urgency assessment for each
+    - Key sources used
+    Format: Brief sections for E, S, G challenges
   agent: esg_sector_researcher
 
 competitor_best_practices_task:
   description: >
-    Ricerca e analisi delle best practice ESG dei principali competitor nel settore {settore}.
+    Research ESG best practices from top 1-2 competitors in {settore}.
     
-    Obiettivi specifici:
-    1. Identificare i top 5-7 leader ESG nel settore attraverso ranking e classifiche autorevoli
-    2. Per ogni azienda leader, documentare 2-3 iniziative ESG innovative e concrete
-    3. Raccogliere dati quantitativi sui risultati ottenuti (quando disponibili)
-    4. Analizzare l'approccio strategico di ciascun leader (quick wins vs investimenti long-term)
-    5. Identificare pattern comuni e approcci differenzianti
-    
-    Concentrati su iniziative con risultati misurabili e documentati.
+    Objectives:
+    1. Identify top ESG leaders in the sector via rankings
+    2. Document 1-2 key initiatives per leader
+    3. Find quantifiable results where available
+    4. Note common approaches
   expected_output: >
-    Un'analisi competitiva dettagliata contenente:
-    - Profili dei 5-7 leader ESG del settore con ranking/score ESG quando disponibili
-    - Per ogni leader: 2-3 iniziative concrete con descrizione, timeline, investimento (se noto), risultati ottenuti
-    - Tabella comparativa delle tipologie di iniziative più comuni
-    - Identificazione di 3-4 best practice trasversali replicabili
-    - Analisi dei ROI/benefici documentati dalle iniziative
-    - Gap analysis: cosa fanno i leader che altri non fanno
-    Formato: profili aziendali + tabelle comparative + executive summary
+    Competitive analysis with:
+    - Profiles of 1-2 ESG leaders with scores/rankings
+    - 1-2 concrete initiatives per leader with results
+    - Common best practices identified
+    - Key differentiators
+    Format: Company profiles + summary table
   agent: competitor_intelligence_analyst
 
 company_profile_research_task:
   description: >
-    Ricerca completa del profilo ESG dell'azienda {azienda_nome} utilizzando 
-    esclusivamente fonti pubbliche disponibili.
+    Research {azienda_nome}'s current ESG profile using public sources.
     
-    Aree di ricerca specifiche:
-    1. Sito web ufficiale: sezione sostenibilità, report ESG, certificazioni
-    2. Report annuali e documenti SEC/Consob degli ultimi 2 anni
-    3. News e articoli di stampa relativi a iniziative ESG o controversie
-    4. Comunicati stampa su sostenibilità e responsabilità sociale
-    5. Presenza su database ESG pubblici (es. CDP, B-Corp, etc.)
-    6. Social media aziendali per iniziative ESG comunicate
-    
-    Se l'azienda ha poca visibilità pubblica, documenta questa lacuna come insight.
+    Research areas:
+    1. Official website sustainability sections
+    2. Latest annual report ESG content
+    3. Recent ESG-related news/press releases
+    4. Public ESG certifications or ratings
   expected_output: >
-    Un profilo aziendale ESG completo che include:
-    - Panoramica generale dell'azienda (settore, dimensioni stimate, mercati)
-    - Inventario delle iniziative ESG esistenti divise per categoria (E, S, G)
-    - Certificazioni e standard ESG già adottati
-    - Cronologia delle comunicazioni ESG pubbliche (ultimi 2 anni)
-    - Analisi della maturità ESG: principiante/intermedio/avanzato con giustificazione
-    - Identificazione di eventuali controversie o criticità ESG documentate
-    - Gap informativi: aree dove mancano dati pubblici
-    - Valutazione della trasparenza ESG aziendale
-    Formato: profilo strutturato con timeline e categorizzazione per area ESG
+    Company ESG profile with:
+    - Overview of existing ESG initiatives by category (E, S, G)
+    - Current certifications/standards
+    - ESG maturity level assessment (basic/intermediate/advanced)
+    - Information gaps identified
+    Format: Categorized profile with maturity assessment
   agent: company_profile_researcher
 
 market_trends_analysis_task:
   description: >
-    Identifica i trend emergenti di sostenibilità nel settore {settore} e 
-    le metriche ESG più rilevanti per il benchmarking.
+    Identify 2-3 emerging sustainability trends in {settore} and key ESG metrics.
     
-    Aree di focus:
-    1. Trend tecnologici emergenti per la sostenibilità nel settore
-    2. Nuovi business model sostenibili che stanno emergendo
-    3. Evoluzione delle aspettative degli stakeholder (clienti, investitori, regolatori)
-    4. Metriche ESG specifiche del settore più utilizzate per benchmarking
-    5. Iniziative di economia circolare rilevanti per il settore
-    6. Trend di investimento ESG nel settore
-    
-    Prioritizza trend con orizzonte temporale 1-3 anni e fonti autorevoli.
+    Focus areas:
+    1. Emerging sustainable technologies for the sector
+    2. New sustainable business models
+    3. Stakeholder expectation changes
+    4. Most-used sector ESG metrics for benchmarking
   expected_output: >
-    Un report sui trend emergenti che contiene:
-    - Lista dei 5-7 trend di sostenibilità più rilevanti per il settore con timeline di adoption
-    - Per ogni trend: descrizione, implicazioni per le aziende, esempi di early adopter
-    - Analisi dell'evoluzione delle aspettative degli stakeholder chiave
-    - Inventario delle 10-15 metriche ESG più utilizzate nel settore per benchmarking
-    - Identificazione di opportunità di first-mover advantage
-    - Analisi dei rischi di "sustainability laggard" nel settore
-    - Raccomandazioni su trend da monitorare prioritariamente
-    Formato: report con sezioni per tipologia di trend + dashboard metriche
+    Trends report with:
+    - 2-3 key sustainability trends with 1-3 year timeline
+    - 3-5 most relevant sector ESG metrics for benchmarking
+    - Early adopter examples
+    - Opportunities and risks identified
+    Format: Trend summaries + metrics dashboard
   agent: market_trends_analyst
 
 comprehensive_benchmark_synthesis_task:
   description: >
-    Integra e sintetizza tutti i dati raccolti dai ricercatori specializzati per creare 
-    un'analisi di benchmark ESG completa e actionable per l'azienda {azienda_nome}.
+    Synthesize all research into actionable ESG benchmark analysis for {azienda_nome}.
     
-    Obiettivi di sintesi:
-    1. Integrare sfide settoriali, best practice competitive, profilo aziendale e trend emergenti
-    2. Identificare il gap tra situazione attuale dell'azienda e best practice del settore
-    3. Evidenziare le opportunità più rilevanti basate sui trend emergenti
-    4. Creare una matrice di priorità basata su urgenza settoriale vs maturità aziendale
-    5. Proporre un set di metriche ESG personalizzate per l'azienda
-    
-    Non fare nuova ricerca, ma elabora e connetti i dati ricevuti dai colleghi.
+    Synthesis objectives:
+    1. Compare company current state vs sector best practices
+    2. Identify top 2 priority ESG areas
+    3. Recommend key metrics for tracking
+    4. Assess readiness for emerging trends
   expected_output: >
-    Un'analisi di benchmark ESG integrata contenente:
-    - Executive Summary con i 5 insight chiave emersi dall'analisi
-    - Gap Analysis dettagliata: dove si posiziona l'azienda vs competitor per ogni area ESG
-    - Matrice Opportunità-Urgenza: incrociando sfide settoriali con maturità aziendale
-    - Benchmark Positioning: posizionamento stimato dell'azienda (laggard/follower/leader)
-    - Set di metriche ESG personalizzate raccomandate per il monitoraggio
-    - Priority Areas: le 3-4 aree ESG dove l'azienda deve concentrarsi prioritariamente
-    - Competitive Intelligence Summary: cosa fanno i migliori che l'azienda potrebbe replicare
-    - Trend Readiness Assessment: quanto l'azienda è preparata per i trend emergenti
-    Formato: documento esecutivo con dashboard visuale delle priorità e metriche
+    Integrated benchmark analysis with:
+    - Executive Summary with 3 key insights
+    - Gap Analysis: company vs competitors
+    - Top 2 Priority ESG Areas with rationale
+    - Recommended ESG metrics set (2-4 metrics)
+    - Competitive positioning assessment
+    - Trend readiness score
+    Format: Executive document with priority matrix
   context:
     - sector_challenges_research_task
     - competitor_best_practices_task 

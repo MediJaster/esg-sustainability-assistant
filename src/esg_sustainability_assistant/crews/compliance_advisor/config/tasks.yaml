@@ -1,135 +1,63 @@
 mandatory_regulations_mapping_task:
   description: >
-    Identifica e mappa tutte le normative ESG obbligatorie applicabili all'azienda {azienda_nome} 
-    nel settore {settore}.
+    Quick mapping of ESG regulations for {azienda_nome} in {settore}.
+    Check: CSRD, EU Taxonomy, top 2 national regulations, supply chain rules.
+    Simple yes/no applicability assessment only.
     
-    Focus specifici:
-    1. CSRD (Corporate Sustainability Reporting Directive) - applicabilità e scadenze
-    2. Tassonomia UE - settori e attività coperte
-    3. Normative nazionali specifiche per il settore
-    4. Regolamentazioni su supply chain e due diligence
-    5. Requisiti di disclosure per mercati finanziari
-    
-    Considera dimensioni aziendali stimate e mercati di operatività.
   expected_output: >
-    Mappa normativa obbligatoria contenente:
-    - Lista completa normative applicabili con livello di certezza (sicuro/probabile/possibile)
-    - Per ogni normativa: scadenze chiave, requisiti principali, sanzioni potenziali
-    - Matrice applicabilità basata su fatturato/dipendenti stimati
-    - Timeline delle scadenze normative per i prossimi 3 anni
-    - Identificazione di gap informativi che richiedono chiarimenti aziendali
-    Formato: tabella normativa + timeline + note interpretative
+    Basic regulation table:
+    - 2-3 key regulations with Yes/No/Maybe status
+    - Next 12 months deadlines
+    - Top 3 immediate priorities
+    Format: Simple table + priority list
   agent: regulatory_framework_specialist
 
 voluntary_standards_selection_task:
   description: >
-    Seleziona e raccomanda i framework ESG volontari più pertinenti per l'azienda 
-    nel settore {settore}.
+    Select top 2 ESG frameworks for {settore}.
+    Quick check: GRI, SASB, TCFD only.
+    Focus on best fit + ease of start.
     
-    Framework da valutare:
-    1. GRI Standards - applicabilità universale e settoriale
-    2. SASB Standards - metriche specifiche del settore
-    3. TCFD - disclosure rischi climatici
-    4. ISO 14001/45001 - sistemi di gestione
-    5. B-Corp/Benefit Corporation - certificazioni impact
-    6. CDP - reporting ambientale
-    
-    Prioritizza in base a valore strategico e complessità implementativa.    
   expected_output: >
-    Raccomandazioni framework volontari con:
-    - Top 3 framework raccomandati con giustificazione della scelta
-    - Per ogni framework: benefici attesi, complessità implementazione, costi stimati
-    - Matrice comparativa: valore strategico vs effort richiesto
-    - Analisi di complementarità tra framework selezionati
-    - Roadmap di adozione progressiva (quale iniziare per primo)
-    - Benchmark: % aziende del settore che usano ciascun framework
-    Formato: recommendation matrix + implementation roadmap
+    Framework recommendations:
+    - Top 1 frameworks with brief why
+    - Easy/Medium/Hard to implement
+    - Which one to start first
+    Format: 1-framework summary + start advice
   agent: international_standards_advisor
 
 sector_specific_requirements_task:
   description: >
-    Analizza requisiti ESG specifici del settore {settore} e best practice 
-    di compliance delle aziende leader.
+    Find 3-5 critical sector ESG requirements for {settore}.
+    Focus on must-have certifications + key industry standards.
+    Quick competitive check.
     
-    Aree di analisi:
-    1. Certificazioni settoriali rilevanti per ESG
-    2. Standard tecnici e requisiti specifici dell'industria
-    3. Protocolli di settore per measurement e reporting
-    4. Analisi compliance approach dei top performer settoriali
-    5. Identificazione di requisiti emergenti specifici del settore
-    
-    Focus su praticità implementativa e competitive advantage.
   expected_output: >
-    Analisi compliance settoriale contenente:
-    - Lista certificazioni settoriali ESG-relevant con prioritizzazione
-    - Standard tecnici specifici applicabili (es. protocolli misurazione emissioni)
-    - Case study compliance: come 3-4 leader settoriali gestiscono requisiti complessi
-    - Identificazione di emerging requirements specifici del settore
-    - Analisi costo-beneficio delle certificazioni settoriali
-    - Quick wins: certificazioni/standard facili da implementare
-    Formato: sector compliance guide + leader analysis + priority matrix
+    Sector essentials:
+    - Top 2-3 sector requirements
+    - 1-2 priority certifications  
+    - Brief competitor insight
+    Format: Priority list + cert recommendations
   agent: sector_compliance_analyst
-
-implementation_timeline_development_task:
-  description: >
-    Sviluppa timeline realistiche per l'implementazione dei framework ESG identificati, 
-    considerando interdipendenze e priorità.
-    
-    Parametri da considerare:
-    1. Scadenze normative obbligatorie (hard deadlines)
-    2. Complessità implementativa di ciascun framework
-    3. Interdipendenze tra diversi standard (prerequisiti)
-    4. Resource requirements stimati per phase
-    5. Quick wins vs progetti strategici long-term
-    6. Seasonal considerations (es. reporting cycles)
-    
-    Crea timeline a 12, 24 e 36 mesi con milestone chiave.
-
-  context: 
-    - mandatory_regulations_mapping_task
-    - voluntary_standards_selection_task
-    - sector_specific_requirements_task
-
-  expected_output: >
-    Roadmap implementazione compliance con:
-    - Timeline dettagliata 36 mesi con milestone trimestrali
-    - Phase 1 (0-12 mesi): compliance minima + quick wins
-    - Phase 2 (12-24 mesi): framework volontari strategici
-    - Phase 3 (24-36 mesi): ottimizzazione e advanced frameworks
-    - Per ogni milestone: deliverable, risorse necessarie, effort stimato
-    - Risk mitigation: cosa succede se si ritarda
-    - Dependencies map: quale framework deve precedere altri
-    Formato: Gantt chart + milestone description + risk analysis
-  agent: implementation_timeline_coordinator
 
 comprehensive_compliance_roadmap_task:
   description: >
-    Sintetizza tutte le analisi compliance in una roadmap integrata e actionable 
-    per l'azienda {azienda_nome}.
+    Combine all inputs into 12-month actionable roadmap for {azienda_nome}.
+    Create simple timeline: Phase 1 (0-6m) + Phase 2 (6-18m).
+    Focus on actionable priorities only.
     
-    Obiettivi di sintesi:
-    1. Integrare normative obbligatorie, standard volontari, requisiti settoriali e timeline
-    2. Creare matrice priorità basata su urgenza normativa vs valore strategico
-    3. Identificare interdipendenze critiche tra diversi requirement
-    4. Proporre governance structure per gestire compliance multipla
-    5. Stimare investment totale e ROI atteso per compliance roadmap
-    
-    Non fare nuova ricerca, elabora i dati ricevuti dai colleghi specialisti.
   context: 
     - mandatory_regulations_mapping_task
     - voluntary_standards_selection_task
     - sector_specific_requirements_task
-    - implementation_timeline_development_task
     
   expected_output: >
-    Roadmap compliance integrata contenente:
-    - Executive Summary: compliance priorities per i prossimi 36 mesi
-    - Compliance Architecture: come framework si integrano tra loro
-    - Priority Matrix: urgenza vs valore strategico per ogni requirement
-    - Resource Planning: budget e FTE necessari per phase
-    - Governance Recommendations: comitati, ruoli, responsabilità per gestire compliance
-    - Risk Assessment: consequences di non-compliance per area
-    - Success Metrics: KPI per monitorare progresso implementazione
-    - Decision Points: quando rivalutare priorità in base a cambiamenti normativi
-    Formato: executive roadmap + detailed implementation guide + governance framework
+    Final roadmap:
+    - Executive summary (key priorities)
+    - Phase 1 (0-6m): Must-dos + quick wins
+    - Phase 2 (6-18m): Framework implementation
+    - Resource needs summary
+    - Top 4 success metrics
+    - Top 3 risks if delayed
+    Format: Executive summary + 2-phase plan + metrics
   agent: compliance_synthesis_expert
