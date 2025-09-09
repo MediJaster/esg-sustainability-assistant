@@ -62,4 +62,6 @@ integrated_strategic_action_plan_task:
     - Top 5 success metrics
     - Key implementation risks
     Format: Action plan + timeline + resource summary
+    The final output should be structured with a first level
+    section and then with subsections as needed.
   agent: strategic_prioritization_expert

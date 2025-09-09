@@ -80,16 +80,10 @@ class SustainabilityStrategistCrew:
         )
 
     @task
-    def roi_impact_quantification_task(self) -> Task:
-        return Task(
-            config=self.tasks_config["roi_impact_quantification_task"], context=[]
-        )
-
-    @task
     def integrated_strategic_action_plan_task(self) -> Task:
         return Task(
             config=self.tasks_config["integrated_strategic_action_plan_task"],
-            output_file="esg_strategic_action_plan.md",
+            output_file="./out/esg_strategic_action_plan.md",
         )
 
     @crew

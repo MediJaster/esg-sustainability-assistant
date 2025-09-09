@@ -89,6 +89,8 @@ comprehensive_benchmark_synthesis_task:
     - Competitive positioning assessment
     - Trend readiness score
     Format: Executive document with priority matrix
+    The final output should be structured with a first level
+    section and then with subsections as needed.
   context:
     - sector_challenges_research_task
     - competitor_best_practices_task 

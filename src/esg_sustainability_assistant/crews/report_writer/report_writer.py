@@ -74,7 +74,7 @@ class ReportWriterCrew:
     def final_report_assembly_task(self) -> Task:
         return Task(
             config=self.tasks_config["final_report_assembly_task"],
-            output_file="complete_esg_sustainability_report.md",
+            output_file="./out/complete_esg_sustainability_report.md",
         )
 
     @crew

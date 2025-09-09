@@ -99,16 +99,10 @@ class ESGComplianceAdvisorCrew:
         )
 
     @task
-    def implementation_timeline_development_task(self) -> Task:
-        return Task(
-            config=self.tasks_config["implementation_timeline_development_task"]
-        )
-
-    @task
     def comprehensive_compliance_roadmap_task(self) -> Task:
         return Task(
             config=self.tasks_config["comprehensive_compliance_roadmap_task"],
-            output_file="esg_compliance_roadmap.md",
+            output_file="./out/esg_compliance_roadmap.md",
         )
 
     @crew

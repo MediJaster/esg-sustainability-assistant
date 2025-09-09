@@ -107,7 +107,7 @@ class ESGDataAnalystCrew:
     def comprehensive_benchmark_synthesis_task(self) -> Task:
         return Task(
             config=self.tasks_config["comprehensive_benchmark_synthesis_task"],
-            output_file="esg_benchmark_analysis.md",
+            output_file="./out/esg_benchmark_analysis.md",
         )
 
     @crew

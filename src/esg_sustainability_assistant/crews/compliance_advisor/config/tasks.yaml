@@ -59,5 +59,7 @@ comprehensive_compliance_roadmap_task:
     - Resource needs summary
     - Top 4 success metrics
     - Top 3 risks if delayed
-    Format: Executive summary + 2-phase plan + metrics
+    Format: Executive summary + 2-phase plan + metrics.
+    The final output should be structured with a first level
+    section and then with subsections as needed.
   agent: compliance_synthesis_expert

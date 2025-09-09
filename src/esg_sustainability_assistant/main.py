@@ -347,21 +347,25 @@ class ESGSustainabilityFlow(Flow[ESGAnalysisState]):
                 else str(self.state.strategic_plan)[:500] + "...",
             )
 
-            if (
-                not hasattr(self, "report_writer_crew")
-                or self.report_writer_crew is None
-            ):
-                self.report_writer_crew = ReportWriterCrew()
+            # if (
+            #     not hasattr(self, "report_writer_crew")
+            #     or self.report_writer_crew is None
+            # ):
+            #     self.report_writer_crew = ReportWriterCrew()
 
-            result = self.report_writer_crew.crew().kickoff(
-                inputs={
-                    "azienda_nome": self.state.company_info.name,
-                    "settore": self.state.company_info.industry_sector,
-                    "benchmark_analysis": self.state.benchmark_analysis,
-                    "compliance_roadmap": self.state.compliance_roadmap,
-                    "strategic_plan": self.state.strategic_plan,
-                }
-            )
+            # result = self.report_writer_crew.crew().kickoff(
+            #     inputs={
+            #         "azienda_nome": self.state.company_info.name,
+            #         "settore": self.state.company_info.industry_sector,
+            #         "benchmark_analysis": self.state.benchmark_analysis,
+            #         "compliance_roadmap": self.state.compliance_roadmap,
+            #         "strategic_plan": self.state.strategic_plan,
+            #     }
+            # )
+
+            result = self.state.benchmark_analysis + "\n\n"
+            result += self.state.compliance_roadmap + "\n\n"
+            result += self.state.strategic_plan
 
             self.state.final_report = str(result)
             mlflow.log_param(
