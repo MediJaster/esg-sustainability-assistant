@@ -1,10 +1,14 @@
+import os
+
 from pydantic_settings import BaseSettings
 from pydantic import SecretStr
+
+OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "out"))
 
 
 class Settings(BaseSettings):
     model_config = {
-        "env_file": ".env", 
+        "env_file": ".env",
         "env_file_encoding": "utf-8",
         "extra": "ignore",  # Ignore unexpected environment variables
     }
